@@ -6,6 +6,9 @@ import reset from 'styled-reset'
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Works from './components/pages/Works';
+import Skills from './components/pages/Skills';
+import Certifications from './components/pages/Certifications';
+import Contact from './components/pages/Contact';
 import NotFound from './components/pages/NotFound';
 import Layout from './components/templates/Layout';
 
@@ -29,6 +32,9 @@ const App = () => {
           <Route index element={<Home />} />
           <Route path='/about' element={<About />} />
           <Route path='/works' element={<Works />} />
+          <Route path='/skills' element={<Skills />} />
+          <Route path='/certifications' element={<Certifications />} />
+          <Route path='/contact' element={<Contact />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
