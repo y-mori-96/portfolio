@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <>
       <Wrapper>
-
         <Div>
           <NavLink to="/">
             <Logo>

@@ -15,6 +15,7 @@ const StyledFooter = styled.footer`
   text-align: center;
   height: 80px;
   line-height: 80px;
+  margin-top: 2rem;
 
   border: 1px solid black;
 `;
