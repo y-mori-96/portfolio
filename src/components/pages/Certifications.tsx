@@ -1,11 +1,11 @@
 // コンポーネント
-import Title from '../../atoms/Title'
+import PageTitle from '../atoms/Titles/PageTitle'
 import CertificationsList from '../organisms/CertificationsList'
 
 const Certifications = () => {
   return (
     <>
-      <Title title="資格" />
+      <PageTitle title="資格" />
       <CertificationsList />
     </>
   )

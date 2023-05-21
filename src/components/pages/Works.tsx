@@ -1,16 +1,16 @@
 // スタイル
 import styled from 'styled-components';
 // コンポーネント
-import Title from '../../atoms/Title'
+import PageTitle from '../atoms/Titles/PageTitle'
 import WorksList from '../organisms/WorksList'
 
 const Works = () => {
   return (
     <>
-      <Title title="制作物" />
-      <Test>
-        <Header3>個人開発</Header3>
-      </Test>
+      <PageTitle title="制作物" />
+      <DevelopmentType>
+        <DevelopmentTypeTitle>個人開発</DevelopmentTypeTitle>
+      </DevelopmentType>
       <WorksList />
     </>
   )
@@ -23,7 +23,7 @@ export default Works
  */
 /** カード
  **************************************/
-const Test = styled.div`
+const DevelopmentType = styled.div`
   width: 100%;
   height: 50px;
   background-color: white;
@@ -32,6 +32,6 @@ const Test = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 2rem;
 `;
-const Header3 = styled.h3`
+const DevelopmentTypeTitle = styled.h3`
   font-size: 2rem;
 `;

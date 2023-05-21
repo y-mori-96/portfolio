@@ -1,7 +1,10 @@
+// コンポーネント
+import PageTitle from '../atoms/Titles/PageTitle'
+
 const Contact = () => {
   return (
     <>
-      <h2>Contact</h2>
+      <PageTitle title="お問い合わせ" />
     </>
   )
 }

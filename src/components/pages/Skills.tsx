@@ -1,5 +1,5 @@
 // コンポーネント
-import Title from '../../atoms/Title'
+import PageTitle from '../atoms/Titles/PageTitle'
 import SkillsSearch from '../organisms/SkillsSearch'
 
 /**
@@ -8,7 +8,7 @@ import SkillsSearch from '../organisms/SkillsSearch'
 const Skills = () => {
   return (
     <>
-      <Title title="スキル" />
+      <PageTitle title="スキル" />
       <SkillsSearch />
     </>
   )
