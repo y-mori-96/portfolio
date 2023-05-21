@@ -1,4 +1,5 @@
-import styled from 'styled-components';
+// コンポーネント
+import Title from '../../atoms/Title'
 import SkillsSearch from '../organisms/SkillsSearch'
 
 /**
@@ -7,19 +8,10 @@ import SkillsSearch from '../organisms/SkillsSearch'
 const Skills = () => {
   return (
     <>
-      <Title>スキル</Title>
+      <Title title="スキル" />
       <SkillsSearch />
     </>
   )
 }
 
 export default Skills
-
-/**
- * スタイル
- */
-const Title = styled.h2`
-  font-size: 3rem;
-  text-align: center;
-  margin: 2rem;
-`;

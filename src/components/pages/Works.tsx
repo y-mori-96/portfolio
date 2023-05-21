@@ -1,7 +1,12 @@
+// コンポーネント
+import Title from '../../atoms/Title'
+import WorksList from '../organisms/WorksList'
+
 const Works = () => {
   return (
     <>
-      <h2>Worksです</h2>
+      <Title title="制作物" />
+      <WorksList />
     </>
   )
 }
