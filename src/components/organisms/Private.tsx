@@ -91,6 +91,7 @@ const Content = styled.div`
 
 const CarouselContainer = styled.div`
   width: 480px;
+  margin: 0 auto;
   /* height: 270px; */
   /* border: 1px solid black;
   background-color: gray; */

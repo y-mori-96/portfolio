@@ -1,48 +1,58 @@
 // スタイル
 import styled from 'styled-components';
+// コンポーネント
+import CarrerTitle from '../atoms/Titles/CarrerTitle'
+import CarrerDateItem from './tabels/CareerDateItem';
+
 
 const Carrer = () => {
   return (
     <>
-      <Content>
-          <div>
-            <div>
+      <ul>
+        <CarrerItem>
+          <InnerContent>
+            <Header>
               <ul>
-                <li>
-                  <InnerContent>
-                    <div>
-                      <ul>
-                        <li>年入社</li>
-                        <li>年退社</li>
-                        <li>年在籍</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3>三菱電機ホーム機器(株)</h3>
-                      <p>炊飯器、掃除機、アプリ開発を行いました。</p>
-                    </div>
-                  </InnerContent>
-                </li>
-
-                <li>
-                  <InnerContent>
-                    <div>
-                      <ul>
-                        <li>年入社</li>
-                        <li>年退社</li>
-                        <li>年在籍</li>
-                      </ul>
-                    </div>
-                    <div>
-                      <h3>三菱電機ホーム機器(株)</h3>
-                      <p>炊飯器、掃除機、アプリ開発を行いました。</p>
-                    </div>
-                  </InnerContent>
-                </li>
+                <CarrerDateItem
+                  inDate="2019年4月"
+                  inState="入社"
+                  outDate="2023年11月"
+                  outState="退職"
+                  period="3年10ヶ月"
+                />
               </ul>
-            </div>
-          </div>
-        </Content>
+            </Header>
+            <Body>
+              <CarrerTitle title='三菱電機ホーム機器株式会社' />
+              <Text>家電製品（炊飯器・掃除機）のソフトウェア開発</Text>
+              <Text>家電製品（炊飯器・掃除機）のソフトウェア開発</Text>
+              <Text>家電製品（炊飯器・掃除機）のソフトウェア開発</Text>
+              <Text>アプリ開発の保守</Text>
+            </Body>
+          </InnerContent>
+        </CarrerItem>
+
+        <CarrerItem>
+          <InnerContent>
+            <Header>
+              <ul>
+                <CarrerDateItem
+                  inDate="2019年4月"
+                  inState="入社"
+                  outDate="2023年11月"
+                  outState="退職"
+                  period="3年10ヶ月"
+                />
+              </ul>
+            </Header>
+            <Body>
+              <CarrerTitle title='三菱電機ホーム機器株式会社' />
+              <Text>家電製品（炊飯器・掃除機）のソフトウェア開発</Text>
+              <Text>アプリ開発の保守</Text>
+            </Body>
+          </InnerContent>
+        </CarrerItem>
+      </ul>
     </>
   )
 }
@@ -52,27 +62,40 @@ export default Carrer
 /**
  * スタイル
  */
-const Content = styled.div`
-  width: 100%;
-  border: 1px solid black;
-  background-color: gray;
-  padding: 1.5rem;
-`;
+const CarrerItem = styled.li`
+  margin-bottom: 2rem;
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  /* border: 1px solid black; */
+  /* background-color: white; */
+  `;
 
 const InnerContent = styled.div`
+  margin: 0 auto;
   display: flex;
+  justify-content: center;
 
-  > div:first-child {
-    margin-right: 1rem;
-  }
+  /* width: 80%; */
+  /* border: 1px solid black; */
+`;
 
-  ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+const Header = styled.div`
+  padding: 1rem;
 
-    li {
-      margin-bottom: 0.5rem;
-    }
-  }
+  /* border: 1px solid black;
+  background-color: gray; */
+  `;
+
+const Body = styled.div`
+  padding: 1rem;
+
+  /* border: 1px solid black;
+  background-color: gray; */
+`;
+
+const Text = styled.p`
+  font-size: 1.5rem;
 `;

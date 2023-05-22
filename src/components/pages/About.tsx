@@ -65,6 +65,6 @@ const Content = styled.div<{ active: boolean }>`
   display: ${({ active }) => (active ? 'block' : 'none')};
   padding: 2rem;
 
-  border: 1px solid black;
+  border: 2px solid black;
   background-color: white;
 `;
