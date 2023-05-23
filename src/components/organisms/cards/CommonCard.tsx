@@ -70,7 +70,7 @@ const TableHeader = styled.th`
   border-bottom: 1px solid #ddd;
 `;
 
-const TableHeaderTitle = styled(TableHeader)`
+export const TableHeaderTitle = styled(TableHeader)`
   text-align: center;
   font-weight: bold;
 `;

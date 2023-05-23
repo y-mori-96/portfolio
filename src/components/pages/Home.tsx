@@ -1,7 +1,12 @@
+// コンポーネント
+import PageTitle from '../atoms/Titles/PageTitle'
+import HomeList from '../organisms/HomeList';
+
 const Home = () => {
   return (
     <>
-      <h2>ホームです</h2>
+      <PageTitle title="森のポートフォリオ" />
+      <HomeList />
     </>
   )
 }
