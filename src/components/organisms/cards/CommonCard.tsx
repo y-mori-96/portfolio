@@ -38,12 +38,57 @@ export default CommonCard;
 /**
  * スタイル
  */
+export const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) and (min-width: 787px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 786px) and (min-width: 601px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  @media (max-width: 600px) and (min-width: 376px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const CardsItem = styled.div`
+  max-width: 400px;
+
+  @media (max-width: 1200px) and (min-width: 787px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 786px) and (min-width: 601px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 600px) and (min-width: 376px) {
+    margin: 0 auto;
+  }
+`;
+
 const CardContainer = styled.div`
   width: 100%;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #00000080;
   border-radius: 4px;
   padding: 2rem;
+
+  @media (max-width: 786px) and (min-width: 601px) {
+    padding: 1rem;
+  }
+  @media (max-width: 600px) and (min-width: 376px) {
+    padding: 1rem;
+  }
+  @media (max-width: 375px) {
+    padding: 1rem;
+  }
 `;
 
 const CardHeader = styled.div`
@@ -53,7 +98,14 @@ const CardHeader = styled.div`
 `;
 
 const Img = styled.img`
-  width: 300px;
+  max-width: 300px;
+
+  @media (max-width: 786px) and (min-width: 601px) {
+    width: 100%;
+  }
+  @media (max-width: 375px) {
+    width: 100%;
+  }
 `;
 
 const CardBody = styled.div`
@@ -71,11 +123,13 @@ const TableHeader = styled.th`
 `;
 
 export const TableHeaderTitle = styled(TableHeader)`
+  max-width: 300px;
   text-align: center;
   font-weight: bold;
 `;
 
 export const TableHeaderData = styled(TableHeader)`
+  width: 100px;
   text-align: left;
 `;
 

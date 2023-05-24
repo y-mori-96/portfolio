@@ -5,25 +5,21 @@ const Header = () => {
   return (
     <>
       <Wrapper>
-        <Div>
-          <NavLink to="/">
-            <Logo>
-              ロゴ
-            </Logo>
-          </NavLink>
-        </Div>
+        <NavLink to="/">
+          <Logo>
+            ロゴ
+          </Logo>
+        </NavLink>
 
-        <Div>
-          <Nav>
-            <List>
-              <Item><StyledNavLink to="/about">私について</StyledNavLink></Item>
-              <Item><StyledNavLink to="/works">制作物</StyledNavLink></Item>
-              <Item><StyledNavLink to="/skills">スキル</StyledNavLink></Item>
-              <Item><StyledNavLink to="/certifications">資格</StyledNavLink></Item>
-              <Item><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></Item>
-            </List>
-          </Nav>
-        </Div>
+        <Nav>
+          <List>
+            <Item><StyledNavLink to="/about">私について</StyledNavLink></Item>
+            <Item><StyledNavLink to="/works">制作物</StyledNavLink></Item>
+            <Item><StyledNavLink to="/skills">スキル</StyledNavLink></Item>
+            <Item><StyledNavLink to="/certifications">資格</StyledNavLink></Item>
+            <Item><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></Item>
+          </List>
+        </Nav>
       </Wrapper>
     </>
   );
@@ -40,17 +36,11 @@ const Wrapper = styled.div`
   border: 1px solid black;
 `;
 
-const Div = styled.div`
-
-`;
-
 const Logo = styled.div`
   width: 80px;
   height: 80px;
   border: 1px solid black;
 `;
-
-
 
 const Nav = styled.nav`
   display: flex;

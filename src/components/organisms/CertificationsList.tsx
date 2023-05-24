@@ -7,6 +7,7 @@ import { SKILLCATEGORIES } from '../../types/skillCategories';
 import { certificationsData } from '../../types/certificationData';
 // コンポーネント
 import CertificationCard from './cards/CertificationCard'
+import { CardsContainer, CardsItem } from './cards/CommonCard';
 
 /**
  * カテゴリ
@@ -62,13 +63,13 @@ const CertificationsList: React.FC = () => {
       <CardsContainer>
         {certificationsData
           // .filter((skill) => checkedCategories.includes('すべて') || checkedCategories.includes(skill.categories))
-          .map((skill, index) => (
+          .map((certification, index) => (
             <CardsItem key={index}>
               <CertificationCard
-                key={skill.title}
-                imageSrc={skill.imageSrc}
-                title={skill.title}
-                date={skill.date}
+                key={certification.title}
+                imageSrc={certification.imageSrc}
+                title={certification.title}
+                date={certification.date}
               />
             </CardsItem>
           ))}
@@ -107,17 +108,4 @@ const CheckboxInput = styled.input`
 const CheckboxLabel = styled.span`
   font-size: 1.5rem;
   height: 100%;
-`;
-
-/** カード
- **************************************/
-const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
-  margin: 0 auto;
-`;
-
-const CardsItem = styled.div`
-  width: 100%;
 `;

@@ -6,6 +6,7 @@ import { SkillCategoriesValue } from '../../types/skillCategories';
 import { SKILLCATEGORIES } from '../../types/skillCategories';
 // コンポーネント
 import SkillCard from './cards/SkillCard'
+import { CardsContainer, CardsItem } from './cards/CommonCard';
 
 /**
  * カテゴリ
@@ -15,7 +16,7 @@ const categories: (SkillCategoriesValue | string)[] = ['すべて', ...Object.va
 /**
  * コンポーネント定義
  */
-const SkillsSearch: React.FC = () => {
+const SkillsList: React.FC = () => {
   const [checkedCategories, setCheckedCategories] = useState<string[]>(['すべて']);
 
   const handleCheckboxChange = (value: string) => {
@@ -77,7 +78,7 @@ const SkillsSearch: React.FC = () => {
   );
 };
 
-export default SkillsSearch;
+export default SkillsList;
 
 /**
  * スタイル
@@ -85,39 +86,70 @@ export default SkillsSearch;
 /** チェックボックス
  **************************************/
 const CheckboxContainer = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 50px; /* CheckboxInputと共通 */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   margin-bottom: 1.5rem;
+
+  @media (max-width: 1200px) and (min-width: 787px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  @media (max-width: 786px) and (min-width: 601px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+  @media (max-width: 600px) and (min-width: 376px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
+  @media (max-width: 375px) {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem;
+  }
 `;
 
 const CheckboxInputWrapper = styled.label`
   display: flex;
   align-items: center;
   cursor: pointer;
+
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px #00000080;
+  padding: 0.5rem;
 `;
 
 const CheckboxInput = styled.input`
   width: 50px;
   height: 50px; /* CheckboxContainerと共通 */
   margin-right: 1rem;
+
+  @media (max-width: 1200px) and (min-width: 787px) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 786px) and (min-width: 601px) {
+    width: 30px;
+    height: 30px;
+  }
+  @media (max-width: 600px) and (min-width: 376px) {
+    width: 20px;
+    height: 20px;
+  }
+  @media (max-width: 375px) {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 const CheckboxLabel = styled.span`
   font-size: 1.5rem;
-  height: 100%;
-`;
+  text-align: center;
 
-/** カード
- **************************************/
-const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
-  margin: 0 auto;
-`;
-
-const CardsItem = styled.div`
-  width: 100%;
+  @media (max-width: 600px) and (min-width: 376px) {
+    font-size: 1rem;
+  }
+  @media (max-width: 375px) {
+    font-size: 1rem;
+  }
 `;

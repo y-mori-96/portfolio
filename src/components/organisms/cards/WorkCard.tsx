@@ -6,8 +6,8 @@ import CommonCard, { CommonCardProps, TableHeaderData, TableData } from './Commo
  */
 type WorkCardProps = CommonCardProps & {
   data: string;
-  skills: string;
   outline: string;
+  skills: string;
 };
 
 /**

@@ -1,8 +1,8 @@
-import styled from 'styled-components';
 // 型
 import { worksData } from '../../types/workData';
 // コンポーネント
-import WorkCard from './cards/WorkCard'
+import WorkCard from './cards/WorkCard';
+import { CardsContainer, CardsItem } from './cards/CommonCard';
 
 /**
  * コンポーネント定義
@@ -14,15 +14,15 @@ const WorksList: React.FC = () => {
       {/* カード */}
       <CardsContainer>
         {worksData
-          .map((skill, index) => (
+          .map((work, index) => (
             <CardsItem key={index}>
               <WorkCard
-                key={skill.title}
-                imageSrc={skill.imageSrc}
-                title={skill.title}
-                data={skill.data}
-                outline={skill.outline}
-                skills={skill.skills}
+                key={work.title}
+                imageSrc={work.imageSrc}
+                title={work.title}
+                data={work.data}
+                outline={work.outline}
+                skills={work.skills}
               />
             </CardsItem>
           ))}
@@ -32,20 +32,3 @@ const WorksList: React.FC = () => {
 };
 
 export default WorksList;
-
-/**
- * スタイル
- */
-
-/** カード
- **************************************/
-const CardsContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2em;
-  margin: 0 auto;
-`;
-
-const CardsItem = styled.div`
-  width: 100%;
-`;
