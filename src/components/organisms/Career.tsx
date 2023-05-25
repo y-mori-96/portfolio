@@ -78,22 +78,24 @@ const InnerContent = styled.div`
   display: flex;
   justify-content: center;
 
-  /* width: 80%; */
+  width: 100%;
   /* border: 1px solid black; */
 `;
 
 const Header = styled.div`
   padding: 1rem;
 
-  /* border: 1px solid black;
-  background-color: gray; */
+  /* border: 1px solid black; */
+  /* border-right: none; */
+  /* background-color: gray; */
   `;
 
 const Body = styled.div`
   padding: 1rem;
 
-  /* border: 1px solid black;
-  background-color: gray; */
+  /* border: 1px solid black; */
+  /* border-left: none; */
+  /* background-color: gray; */
 `;
 
 const Text = styled.p`

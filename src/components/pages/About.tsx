@@ -47,24 +47,32 @@ const TabContainer = styled.ul`
   justify-content: center;
   list-style: none;
   padding: 0;
-
-  `;
+`;
 
 const TabItems = styled.li<{ active: boolean }>`
+  font-size: 1.5rem;
   cursor: pointer;
+  width: 100%;
   padding: 10px 20px;
-  background-color: ${({ active }) => (active ? '#eaeaea' : 'transparent')};
+  background-color: ${({ active }) => (active ? '#ffffff' : 'transparent')};
+  /* border-top: ${({ active }) => (active ? '3px solid black' : 'none')}; */
 
   &:hover {
     background-color: #eaeaea;
+    /* background-color: white; */
   }
-  border: 1px solid black;
+  border: 3px solid black;
+  &:last-child{
+    border-left: none;
+    /* border-left: 3px solid black; */
+  }
 `;
 
 const Content = styled.div<{ active: boolean }>`
   display: ${({ active }) => (active ? 'block' : 'none')};
   padding: 2rem;
 
-  border: 2px solid black;
+  border: 3px solid black;
+  border-top: none;
   background-color: white;
 `;
