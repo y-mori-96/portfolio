@@ -47,7 +47,7 @@ export const CardsContainer = styled.div`
   @media (max-width: 1200px) and (min-width: 787px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
   }
@@ -65,7 +65,7 @@ export const CardsItem = styled.div`
   @media (max-width: 1200px) and (min-width: 787px) {
     margin: 0 auto;
   }
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     margin: 0 auto;
   }
   @media (max-width: 600px) and (min-width: 376px) {
@@ -80,7 +80,7 @@ const CardContainer = styled.div`
   border-radius: 4px;
   padding: 2rem;
 
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     padding: 1rem;
   }
   @media (max-width: 600px) and (min-width: 376px) {
@@ -100,7 +100,7 @@ const CardHeader = styled.div`
 const Img = styled.img`
   max-width: 300px;
 
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     width: 100%;
   }
   @media (max-width: 375px) {

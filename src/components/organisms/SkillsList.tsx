@@ -95,7 +95,7 @@ const CheckboxContainer = styled.div`
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
@@ -128,7 +128,7 @@ const CheckboxInput = styled.input`
     width: 30px;
     height: 30px;
   }
-  @media (max-width: 786px) and (min-width: 601px) {
+  @media (max-width: 768px) and (min-width: 601px) {
     width: 30px;
     height: 30px;
   }

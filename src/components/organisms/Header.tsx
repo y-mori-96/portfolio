@@ -7,11 +7,13 @@ const Header = () => {
   return (
     <>
       <Wrapper>
-        <NavLink to="/">
-          <Logo>
-            ロゴ
-          </Logo>
-        </NavLink>
+        <h1>
+          <NavLink to="/">
+            <Logo>
+              ロゴ
+            </Logo>
+          </NavLink>
+        </h1>
 
         <Nav />
       </Wrapper>
@@ -21,11 +23,13 @@ const Header = () => {
 
 export default Header
 
+/**
+ * スタイル
+ */
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  height: 80px;
+  height: 80px; /* レスポンシブ時のナビの高さを合わせる */
 
   border: 1px solid black;
 `;

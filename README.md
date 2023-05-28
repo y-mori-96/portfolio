@@ -17,6 +17,7 @@
 | ---- | ---- | ---- | ---- |
 |  共通        |  ﾛｺﾞ           |  -   |  h1  |
 |  共通        |  ﾍﾟｰｼﾞﾀｲﾄﾙ     |  3    |  h2  |
+|  共通        |  ﾚｽﾎﾟﾝｼﾌﾞﾅﾋﾞ   |  3    |  a  |
 |  私について  |  ﾌﾟﾗｲﾍﾞｰﾄﾀｲﾄﾙ  |  2    |  h3  |
 |  私について  |  ﾀﾌﾞﾀｲﾄﾙ       |  1.5    |  li  |
 |  私について  |  経歴ﾀｲﾄﾙ      |  2    |  h3  |
@@ -24,6 +25,29 @@
 |  制作物      |  開発種類      |  2    |  h3  |
 |  スキル      |  ｽｷﾙ検索       |  1.5  |  checkbox  |
 
+## ブレイクポイント
+### PC
+```typescript
+@media (max-width: 1200px) and (min-width: 769px) {
+}
+```
+### タブレット
+```typescript
+@media (max-width: 768px) and (min-width: 601px) {
+}
+```
+### PC半分
+```typescript
+@media (max-width: 600px) and (min-width: 376px) {
+  grid-template-columns: repeat(1, 1fr);
+}
+```
+### モバイル
+```typescript
+@media (max-width: 375px) {
+  grid-template-columns: repeat(1, 1fr);
+}
+```
 
 ## スキル
 ### カテゴリ
