@@ -44,7 +44,7 @@ export const CardsContainer = styled.div`
   gap: 2rem;
   margin: 0 auto;
 
-  @media (max-width: 1200px) and (min-width: 787px) {
+  @media (max-width: 1200px) and (min-width: 769px) {
     grid-template-columns: repeat(2, 1fr);
   }
   @media (max-width: 768px) and (min-width: 601px) {
@@ -62,7 +62,7 @@ export const CardsContainer = styled.div`
 export const CardsItem = styled.div`
   max-width: 400px;
 
-  @media (max-width: 1200px) and (min-width: 787px) {
+  @media (max-width: 1200px) and (min-width: 769px) {
     margin: 0 auto;
   }
   @media (max-width: 768px) and (min-width: 601px) {
@@ -73,7 +73,7 @@ export const CardsItem = styled.div`
   }
 `;
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
   width: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px #00000080;
@@ -112,7 +112,7 @@ const CardBody = styled.div`
   width: 100%;
 `;
 
-const Table = styled.table`
+export const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
 `;
@@ -126,6 +126,7 @@ export const TableHeaderTitle = styled(TableHeader)`
   max-width: 300px;
   text-align: center;
   font-weight: bold;
+  font-size: 1.25rem;
 `;
 
 export const TableHeaderData = styled(TableHeader)`

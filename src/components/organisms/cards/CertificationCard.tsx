@@ -1,24 +1,35 @@
+import styled from 'styled-components';
 // コンポーネント
-import CommonCard, { CommonCardProps, TableHeaderData, TableData } from './CommonCard';
+import CommonCard, { CommonCardProps, Table, TableHeaderTitle, TableHeaderData, TableData, CardContainer } from './CommonCard';
 
 /**
  * 型定義
  */
-type CertificationCardProps = CommonCardProps & {
+type CertificationCardProps = {
+  title: string;
   date: string;
 };
 
 /**
  * コンポーネント定義
  */
-const CertificationCard = ({ imageSrc, title, date }: CertificationCardProps ) => {
+const CertificationCard = ({ title, date }: CertificationCardProps ) => {
   return (
-    <CommonCard imageSrc={imageSrc} title={title}>
-      <tr>
-        <TableHeaderData>取得年</TableHeaderData>
-        <TableData>{date}</TableData>
-      </tr>
-    </CommonCard>
+    <CardContainer>
+      <div>
+        <Table>
+          <tbody>
+            <tr>
+              <TableHeaderTitle colSpan={2}>{title}</TableHeaderTitle>
+            </tr>
+            <tr>
+              <TableHeaderData>取得年</TableHeaderData>
+              <TableData>{date}</TableData>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </CardContainer>
   );
 };
 
