@@ -26,13 +26,13 @@ const About = () => {
         </TabItems>
       </TabContainer>
 
-      <Content active={toggle === 1}>
+      <Section active={toggle === 1}>
         <Career />
-      </Content>
+      </Section>
 
-      <Content active={toggle === 2}>
+      <Section active={toggle === 2}>
         <Private />
-      </Content>
+      </Section>
     </>
   )
 }
@@ -68,7 +68,7 @@ const TabItems = styled.li<{ active: boolean }>`
   }
 `;
 
-const Content = styled.div<{ active: boolean }>`
+const Section = styled.section<{ active: boolean }>`
   display: ${({ active }) => (active ? 'block' : 'none')};
   padding: 2rem;
 

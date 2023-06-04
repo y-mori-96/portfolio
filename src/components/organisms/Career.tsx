@@ -79,7 +79,7 @@ const InnerContent = styled.div`
   justify-content: center;
 
   width: 100%;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 `;
 
 const Header = styled.div`
