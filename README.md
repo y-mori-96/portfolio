@@ -26,7 +26,12 @@
 |  スキル      |  ｽｷﾙ検索       |  1.5  |  checkbox  |
 
 ## ブレイクポイント
-### PC
+### デスクトップ
+```typescript
+@media (min-width: 1201px) {
+}
+```
+### ノートPC
 ```typescript
 @media (max-width: 1200px) and (min-width: 769px) {
 }

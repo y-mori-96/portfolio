@@ -70,8 +70,8 @@ const TabItems = styled.li<{ active: boolean }>`
 
 const Section = styled.section<{ active: boolean }>`
   display: ${({ active }) => (active ? 'block' : 'none')};
-  padding: 2rem;
 
+  padding: 2rem;
   border: 3px solid black;
   border-top: none;
   background-color: white;
