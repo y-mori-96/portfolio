@@ -120,6 +120,10 @@ export const Table = styled.table`
 const TableHeader = styled.th`
   padding: 1rem;/* TableData内も変更する */
   border-bottom: 1px solid #ddd;
+
+  &:last-child {
+    border-bottom: none;
+  }
 `;
 
 export const TableHeaderTitle = styled(TableHeader)`

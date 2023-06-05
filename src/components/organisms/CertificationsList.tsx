@@ -18,6 +18,7 @@ const CertificationsList = () => {
               key={certification.title}
               title={certification.title}
               date={certification.date}
+              comment={certification.comment}
             />
           </CardsItem>
         ))}
