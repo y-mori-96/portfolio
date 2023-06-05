@@ -44,13 +44,11 @@
 ### PC半分
 ```typescript
 @media (max-width: 600px) and (min-width: 376px) {
-  grid-template-columns: repeat(1, 1fr);
 }
 ```
 ### モバイル
 ```typescript
 @media (max-width: 375px) {
-  grid-template-columns: repeat(1, 1fr);
 }
 ```
 

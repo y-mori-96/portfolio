@@ -9,6 +9,9 @@ import Programing from './privates/Programing'
 import picture1 from '../../images/ito.jpg';
 import picture2 from '../../images/Nature2.jpg';
 import picture3 from '../../images/Nature3.jpg';
+import arrow_left from '../../images/arrow_left.png';
+import arrow_right from '../../images/arrow_right.png';
+
 
 const Private = () => {
   const images = [picture1, picture2, picture3];
@@ -45,31 +48,33 @@ const Private = () => {
   return (
     <>
       <Wrapper>
-        <Content>
-          <CarouselContainer>
-            <CarouselImage src={images[currentImage]} alt="Carousel Image" />
-          </CarouselContainer>
-        </Content>
-        <Content>
-          {currentContent === 0 && <Travel />}
-          {currentContent === 1 && <Boardgame />}
-          {currentContent === 2 && <Programing />}
-        </Content>
+        <ContentsWrapper>
+          <Contents>
+            <CarouselContainer>
+              <CarouselImage src={images[currentImage]} alt="プライベート画像" />
+            </CarouselContainer>
+          </Contents>
+          <Contents>
+            {currentContent === 0 && <Travel />}
+            {currentContent === 1 && <Boardgame />}
+            {currentContent === 2 && <Programing />}
+          </Contents>
+        </ContentsWrapper>
+
+        <NavigationWrapper>
+          <Navigation>
+
+            <Img src={arrow_left} alt="戻る" onClick={goToPreviousImage} />
+            <Dots>
+              {images.map((_, index) => (
+                <Dot key={index} active={index === currentImage} onClick={() => goToImage(index)} />
+              ))}
+            </Dots>
+            <Img src={arrow_right} alt="次へ" onClick={goToNextImage} />
+
+          </Navigation>
+        </NavigationWrapper>
       </Wrapper>
-
-      <NavigationWrapper>
-        <Navigation>
-          <Button onClick={goToPreviousImage}>戻る</Button>
-
-          <Dots>
-            {images.map((_, index) => (
-              <Dot key={index} active={index === currentImage} onClick={() => goToImage(index)} />
-            ))}
-          </Dots>
-
-          <Button onClick={goToNextImage}>次へ</Button>
-        </Navigation>
-      </NavigationWrapper>
     </>
   );
 }
@@ -81,59 +86,76 @@ export default Private
  */
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
 `;
 
-const Content = styled.div`
+const ContentsWrapper = styled.div`
+  display: flex;
+  margin-bottom: 1rem;
+
+  @media (max-width: 600px) {
+    flex-direction: column-reverse;
+  }
+`;
+
+const Contents = styled.div`
   width: 100%;
   border: 1px solid black;
   padding: 1.5rem;
 `;
 
 const CarouselContainer = styled.div`
-  width: 480px;
-  margin: 0 auto;
-  /* height: 270px; */
-  /* border: 1px solid black;
-  background-color: gray; */
-  `;
+  width: 100%;
+`;
 
 const CarouselImage = styled.img`
   width: 100%;
   height: 270px;
-  /* height: 100%; */
   object-fit: contain;
 `;
 
 const NavigationWrapper = styled.div`
   width: 100%;
-  background-color: #c9c9c9;
+
+  @media (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
 `;
 
 const Navigation = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10px;
 `;
 
-const Button = styled.button`
-  padding: 5px 10px;
-  background-color: #eaeaea;
-  border: none;
-  outline: none;
+const Img = styled.img`
   cursor: pointer;
 `;
 
 const Dots = styled.div`
+  width: 20%;
   display: flex;
-  margin: 0 10px;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0 2rem;
+
+  @media (max-width: 768px) and (min-width: 601px) {
+    gap: 1rem;
+  }
+  @media (max-width: 600px) {
+    width: 40%;
+    gap: 0.5rem;
+  }
 `;
 
 const Dot = styled.div<{ active: boolean }>`
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
   background-color: ${({ active }) => (active ? 'black' : 'gray')};
-  margin-right: 5px;
+
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   cursor: pointer;
 `;

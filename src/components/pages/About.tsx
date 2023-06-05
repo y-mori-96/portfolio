@@ -66,6 +66,10 @@ const TabItems = styled.li<{ active: boolean }>`
     border-left: none;
     /* border-left: 3px solid black; */
   }
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
 
 const Section = styled.section<{ active: boolean }>`
