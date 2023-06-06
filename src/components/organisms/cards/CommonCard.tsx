@@ -73,6 +73,13 @@ export const CardsItem = styled.div`
   }
 `;
 
+export const CardsItemHover = styled(CardsItem)`
+  &:hover {
+    cursor: pointer;
+  }
+`;
+
+
 export const CardContainer = styled.div`
   width: 100%;
   background-color: #fff;
@@ -141,4 +148,5 @@ export const TableHeaderData = styled(TableHeader)`
 export const TableData = styled.td`
   padding: 1rem;/* TableHeader内も変更する */
   border-bottom: 1px solid #ddd;
+  text-align: center;
 `;

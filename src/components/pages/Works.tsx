@@ -21,8 +21,6 @@ export default Works
 /**
  * スタイル
  */
-/** カード
- **************************************/
 const DevelopmentType = styled.div`
   width: 100%;
   height: 50px;

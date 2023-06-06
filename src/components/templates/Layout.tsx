@@ -18,9 +18,9 @@ const Layout = () => {
 export default Layout
 
 const Wrapper = styled.div`
-  max-width: 1250px;
+  width: 1250px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 0 20px;
 
   border: 1px solid black;
   background-color: #efefef;

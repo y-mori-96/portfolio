@@ -13,23 +13,22 @@ type WorkCardProps = CommonCardProps & {
 /**
  * コンポーネント定義
  */
-const SkillCard = ({ imageSrc, title, outline, data, skills }: WorkCardProps ) => {
+const WorkCard = ({ imageSrc, title, outline, data, skills }: WorkCardProps ) => {
   return (
     <CommonCard imageSrc={imageSrc} title={title}>
       <tr>
-        <TableHeaderData>概要</TableHeaderData>
-        <TableData>{outline}</TableData>
+        <TableData colSpan={2}>{outline}</TableData>
       </tr>
-      <tr>
+      {/* <tr>
         <TableHeaderData>制作期間</TableHeaderData>
         <TableData>{data}</TableData>
       </tr>
       <tr>
         <TableHeaderData>使用技術</TableHeaderData>
         <TableData>{skills}</TableData>
-      </tr>
+      </tr> */}
     </CommonCard>
   );
 };
 
-export default SkillCard;
+export default WorkCard;
