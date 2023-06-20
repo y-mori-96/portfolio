@@ -1,46 +1,47 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 // 型
-import { worksData } from '../../types/workData';
+import { worksData } from "../../types/workData";
 // コンポーネント
-import WorkCard from './cards/WorkCard';
-import { CardsContainer, CardsItemHover } from './cards/CommonCard';
-import Modal from './modals/Modal';
+import WorkCard from "./cards/WorkCard";
+import { CardsContainer, CardsItemHover } from "./cards/CommonCard";
+import PortfolioModal from "./modals/PortfolioModal";
+import ForestCodeModal from "./modals/ForestCodeModal";
 
 /**
  * コンポーネント定義
  */
 const WorksList: React.FC = () => {
-  const [isModalOpen, setIsModalOpen] = useState(true);
+  const [selectedWork, setSelectedWork] = useState<string | null>(null);;
 
-  const openModal = () => {
-    setIsModalOpen(true);
+  const openModal = (work: string) => {
+    setSelectedWork(work);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    setSelectedWork(null);
   };
 
   return (
     <>
       {/* カード */}
       <CardsContainer>
-        {worksData
-          .map((work, index) => (
-            <CardsItemHover key={index} onClick={openModal}>
-              <WorkCard
-                key={work.title}
-                imageSrc={work.imageSrc}
-                title={work.title}
-                data={work.data}
-                outline={work.outline}
-                skills={work.skills}
-              />
-            </CardsItemHover>
-          ))}
+        {worksData.map((work, index) => (
+          <CardsItemHover key={index} onClick={() => openModal(work.modal)}>
+            <WorkCard
+              key={work.title}
+              imageSrc={work.imageSrc}
+              title={work.title}
+              data={work.data}
+              outline={work.outline}
+              skills={work.skills}
+            />
+          </CardsItemHover>
+        ))}
       </CardsContainer>
 
       {/* モーダルを表示する */}
-      {isModalOpen && <Modal onClose={closeModal} />}
+      {selectedWork === "portfolio" && (<PortfolioModal onClose={closeModal} />)}
+      {selectedWork === "forestCode" && (<ForestCodeModal onClose={closeModal} />)}
     </>
   );
 };
