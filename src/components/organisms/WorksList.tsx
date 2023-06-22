@@ -31,9 +31,7 @@ const WorksList: React.FC = () => {
               key={work.title}
               imageSrc={work.imageSrc}
               title={work.title}
-              data={work.data}
-              outline={work.outline}
-              skills={work.skills}
+              dsescription={work.dsescription}
             />
           </CardsItemHover>
         ))}

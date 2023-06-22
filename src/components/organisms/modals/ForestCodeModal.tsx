@@ -1,43 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
+// データ
+import { worksData } from '../../../types/workData';
+// コンポーネント
+import WorkModalSiteTitle from '../../atoms/Titles/WorkModalSiteTitle';
+import WorkModalOutline from '../../molecules/WorkModalOutline';
+import WorkModalInfo from '../../molecules/WorkModalInfo';
 
 interface ModalProps {
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ onClose }) => {
+const ForestCodeModal: React.FC<ModalProps> = ({ onClose }) => {
+  const siteData = worksData[1];
   return (
     <>
-      <ModalContainer />
+      <ModalContainer onClick={onClose}/>
       <Wrapper>
-        <ModalContent>
-          <Screenshot>
-            <div>
-              <p>PC</p>
-            </div>
-            <div>
-              <p>モバイル</p>
-            </div>
-          </Screenshot>
+        <WorkModalSiteTitle
+          title = {siteData.title}
+        />
 
-          <Description>
-            <h2>FOREST-CODE</h2>
-            <DescriptionList>
-              <DescriptionTerm>コンセプト</DescriptionTerm>
-              <DescriptionDetails>学習記録</DescriptionDetails>
+        <WorkModalOutline
+          genre = {siteData.genre}
+          dsescription = {siteData.dsescription}
+          siteImage = {siteData.siteImage}
+          link = {siteData.siteLink}
+        />
 
-              <DescriptionTerm>使用技術</DescriptionTerm>
-              <DescriptionDetails>React</DescriptionDetails>
-            </DescriptionList>
-          </Description>
-        </ModalContent>
-          <button onClick={onClose}>Close</button>
+        <WorkModalInfo
+          release = {siteData.release}
+          period = {siteData.period}
+          technology = {siteData.technology}
+          device = {siteData.device}
+        />
+
+        <Button onClick={onClose}>Close</Button>
       </Wrapper>
     </>
   );
 };
 
-export default Modal;
+export default ForestCodeModal;
 
 /**
  * スタイル
@@ -49,47 +53,30 @@ const ModalContainer = styled.div`
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  cursor: pointer;
 `;
 
 const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
+
   width: 1250px;
   max-width: 100%;
   margin: 0 auto;
 
-  height: 100vh;
+  height: auto;
 
   border: 1px solid black;
   background-color: #ffffff;
 `;
 
-const ModalContent = styled.div`
-  display: flex;
-  justify-content: center;
-`;
 
-const Screenshot = styled.div`
-  width: 50%;
-  text-align: center;
-`;
+const Button = styled.button`
+  font-size: 2rem;
 
-const Description = styled.div`
-  width: 50%;
-  text-align: left;
-`;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
 
-const DescriptionList = styled.dl`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-`;
-const DescriptionTerm = styled.dt`
-  width: 40%; // ddと合計で100％になるように
-  font-size: 1.5rem;
-`;
-const DescriptionDetails = styled.dd`
-  width: 60%; // dtと合計で100％になるように
-  font-size: 1.5rem;
 `;

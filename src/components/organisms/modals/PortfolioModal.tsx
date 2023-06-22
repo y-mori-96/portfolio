@@ -1,50 +1,47 @@
 import React from 'react';
 import styled from 'styled-components';
+// データ
+import { worksData } from '../../../types/workData';
 // コンポーネント
-import SiteButton from '../../atoms/buttons/SiteButtom'
-// 画像
-import noImage from '../../../images/noImg.png';
+import WorkModalSiteTitle from '../../atoms/Titles/WorkModalSiteTitle';
+import WorkModalOutline from '../../molecules/WorkModalOutline';
+import WorkModalInfo from '../../molecules/WorkModalInfo';
 
 interface ModalProps {
   onClose: () => void;
 }
 
-const Modal: React.FC<ModalProps> = ({ onClose }) => {
+const PortfolioModal: React.FC<ModalProps> = ({ onClose }) => {
+  const siteData = worksData[0];
   return (
     <>
       <ModalContainer onClick={onClose}/>
       <Wrapper>
-        <SiteTitle>森のポートフォリオ</SiteTitle>
-        <Outline>
-          <OutlineImgWrapper>
-              <OutlineImg src={noImage} alt="" />
-          </OutlineImgWrapper>
-          <OutlineBody>
-            <Genre>ポートフォリオサイト</Genre>
-            <Description>
-              自身の経歴や作品などをご紹介するサイト
-            </Description>
-            {/* <SiteButton url="#" /> */}
-          </OutlineBody>
-        </Outline>
+        <WorkModalSiteTitle
+          title = {siteData.title}
+        />
 
-          <Description>
-            <h2>森のポートフォリオ</h2>
-            <DescriptionList>
-              <DescriptionTerm>コンセプト</DescriptionTerm>
-              <DescriptionDetails>学習記録</DescriptionDetails>
+        <WorkModalOutline
+          genre = {siteData.genre}
+          dsescription = {siteData.dsescription}
+          siteImage = {siteData.siteImage}
+          link = {siteData.siteLink}
+        />
 
-              <DescriptionTerm>使用技術</DescriptionTerm>
-              <DescriptionDetails>React</DescriptionDetails>
-            </DescriptionList>
-          </Description>
-          <button onClick={onClose}>Close</button>
+        <WorkModalInfo
+          release = {siteData.release}
+          period = {siteData.period}
+          technology = {siteData.technology}
+          device = {siteData.device}
+        />
+
+        <Button onClick={onClose}>Close</Button>
       </Wrapper>
     </>
   );
 };
 
-export default Modal;
+export default PortfolioModal;
 
 /**
  * スタイル
@@ -67,64 +64,19 @@ const Wrapper = styled.div`
   max-width: 100%;
   margin: 0 auto;
 
-  height: 100vh;
+  height: auto;
 
   border: 1px solid black;
   background-color: #ffffff;
 `;
 
-const Outline = styled.div`
-  display: flex;
-  gap: 2rem;
-  /* justify-content: center; */
 
-  /* height: 100vh; */
-  width: 100%;
-  padding: 2rem;
+const Button = styled.button`
+  font-size: 2rem;
 
-  background-color: #ccc;
-`;
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin: 0 auto;
 
-const OutlineImgWrapper = styled.div`
-  width: 60%;
-`;
-
-const OutlineImg = styled.img`
-  width: 100%;
-  vertical-align: bottom;
-`;
-
-const OutlineBody = styled.div`
-  width: 40%;
-  text-align: left;
-`;
-
-const SiteTitle = styled.h3`
-  font-size: 3rem;
-  text-align: center;
-  margin: 2rem 0;
-`;
-const Genre = styled.h4`
-  text-align: center;
-  font-size: 2.5rem;
-  margin: 2rem 0;
-`;
-
-const Description = styled.div`
-  font-size: 1.5rem;
-  margin: 2rem 0;
-`;
-
-const DescriptionList = styled.dl`
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-`;
-const DescriptionTerm = styled.dt`
-  width: 40%; // ddと合計で100％になるように
-  font-size: 1.5rem;
-`;
-const DescriptionDetails = styled.dd`
-  width: 60%; // dtと合計で100％になるように
-  font-size: 1.5rem;
 `;

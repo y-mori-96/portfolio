@@ -4,29 +4,19 @@ import CommonCard, { CommonCardProps, TableHeaderData, TableData } from './Commo
 /**
  * 型定義
  */
-type WorkCardProps = CommonCardProps & {
-  data: string;
-  outline: string;
-  skills: string;
+type Props = CommonCardProps & {
+  dsescription: string;
 };
 
 /**
  * コンポーネント定義
  */
-const WorkCard = ({ imageSrc, title, outline, data, skills }: WorkCardProps ) => {
+const WorkCard = ({ imageSrc, title, dsescription, }: Props ) => {
   return (
     <CommonCard imageSrc={imageSrc} title={title}>
       <tr>
-        <TableData colSpan={2}>{outline}</TableData>
+        <TableData colSpan={2}>{dsescription}</TableData>
       </tr>
-      {/* <tr>
-        <TableHeaderData>制作期間</TableHeaderData>
-        <TableData>{data}</TableData>
-      </tr>
-      <tr>
-        <TableHeaderData>使用技術</TableHeaderData>
-        <TableData>{skills}</TableData>
-      </tr> */}
     </CommonCard>
   );
 };
