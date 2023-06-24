@@ -1,31 +1,50 @@
+import React from 'react';
 // 型
-import { SkillCategoriesValue } from '../../../types/skillCategories';
+import { SkillData } from '../../../types/SkillData';
 // コンポーネント
-import CommonCard, { CommonCardProps, TableHeaderData, TableData } from './CommonCard';
+import { Table, TableRow, TableHeaderTitle, TableHeaderData, TableData, CardContainer } from './CommonCard';
 
 /**
  * 型定義
  */
-type SkillCardProps = CommonCardProps & {
-  level: string;
-  categories: SkillCategoriesValue;
-};
+type PickSkillData = Pick<SkillData, 'title' | 'experience' | 'dsescription'>
 
 /**
  * コンポーネント定義
  */
-const SkillCard = ({ imageSrc, title, level, categories }: SkillCardProps ) => {
+const SkillCard = ({ title, experience, dsescription }: PickSkillData) => {
   return (
-    <CommonCard imageSrc={imageSrc} title={title}>
-      <tr>
-        <TableHeaderData>経験</TableHeaderData>
-        <TableData>{level}</TableData>
-      </tr>
-      <tr>
-        <TableHeaderData>カテゴリ</TableHeaderData>
-        <TableData>{categories}</TableData>
-      </tr>
-    </CommonCard>
+    <CardContainer>
+      <div>
+        <Table>
+          <tbody>
+            <tr>
+              <TableHeaderTitle colSpan={2}>
+                {title.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </TableHeaderTitle>
+            </tr>
+            <TableRow>
+              <TableData colSpan={2}>{experience}</TableData>
+            </TableRow>
+            <tr>
+              <TableData colSpan={2}>
+                {dsescription.split('\n').map((line, index) => (
+                  <React.Fragment key={index}>
+                    {line}
+                    <br />
+                  </React.Fragment>
+                ))}
+              </TableData>
+            </tr>
+          </tbody>
+        </Table>
+      </div>
+    </CardContainer>
   );
 };
 

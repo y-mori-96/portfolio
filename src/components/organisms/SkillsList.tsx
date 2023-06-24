@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 // 型
-import { skillsData } from '../../types/skillData'
-import { SkillCategoriesValue } from '../../types/skillCategories';
-import { SKILLCATEGORIES } from '../../types/skillCategories';
+import SkillsData from '../../types/SkillData'
+import { SkillCategoriesValue } from '../../types/SkillCategories';
+import { SKILLCATEGORIES } from '../../types/SkillCategories';
 // コンポーネント
 import SkillCard from './cards/SkillCard'
 import { CardsContainer, CardsItem } from './cards/CommonCard';
@@ -60,16 +60,15 @@ const SkillsList: React.FC = () => {
 
       {/* スキルカード */}
       <CardsContainer>
-        {skillsData
+        {SkillsData
           .filter((skill) => checkedCategories.includes('すべて') || checkedCategories.includes(skill.categories))
           .map((skill, index) => (
             <CardsItem key={index}>
               <SkillCard
                 key={skill.title}
-                imageSrc={skill.imageSrc}
                 title={skill.title}
-                level={skill.level}
-                categories={skill.categories as SkillCategoriesValue}
+                experience={skill.experience}
+                dsescription={skill.dsescription}
               />
             </CardsItem>
           ))}
