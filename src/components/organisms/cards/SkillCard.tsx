@@ -2,7 +2,7 @@ import React from 'react';
 // 型
 import { SkillData } from '../../../types/SkillData';
 // コンポーネント
-import { Table, TableRow, TableHeaderTitle, TableHeaderData, TableData, CardContainer } from './CommonCard';
+import { Table, TableRow, TableHeaderTitle, TableData, CardContainer } from './CommonCard';
 
 /**
  * 型定義

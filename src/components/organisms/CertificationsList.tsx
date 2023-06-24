@@ -1,5 +1,5 @@
 // 型
-import { certificationsData } from '../../types/certificationData';
+import certificationsData from '../../types/CertificationData';
 // コンポーネント
 import CertificationCard from './cards/CertificationCard'
 import { CardsContainer, CardsItem } from './cards/CommonCard';

@@ -1,20 +1,13 @@
 import React from 'react';
+//　型
+import { CertificationData } from '../../../types/CertificationData';
 // コンポーネント
 import { Table, TableHeaderTitle, TableHeaderData, TableData, CardContainer } from './CommonCard';
 
 /**
- * 型定義
- */
-type CertificationCardProps = {
-  title: string;
-  date: string;
-  comment: string;
-};
-
-/**
  * コンポーネント定義
  */
-const CertificationCard = ({ title, date, comment }: CertificationCardProps ) => {
+const CertificationCard = ({ title, date, comment }: CertificationData ) => {
   return (
     <CardContainer>
       <div>

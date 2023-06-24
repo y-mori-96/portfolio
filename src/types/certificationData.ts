@@ -4,7 +4,7 @@ export type CertificationData = {
   comment: string;
 };
 
-export const certificationsData: CertificationData[] = [
+const CertificationsData: CertificationData[] = [
   {
     title: "基本情報技術者試験",
     date: "2021(令和3)年 7月",
@@ -46,3 +46,5 @@ export const certificationsData: CertificationData[] = [
     comment: `\n`,
   },
 ];
+
+export default CertificationsData;
