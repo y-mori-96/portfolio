@@ -82,13 +82,8 @@ export const CardContainer = styled.div`
   border-radius: 4px;
   padding: 0.8rem;
 
-  @media (max-width: 768px) and (min-width: 601px) {
-    padding: 1rem;
-  }
-  @media (max-width: 600px) and (min-width: 376px) {
-    padding: 1rem;
-  }
-  @media (max-width: 375px) {
+  @media (max-width: 768px) {
+    height: 100%;
     padding: 1rem;
   }
 `;
