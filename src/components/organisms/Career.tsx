@@ -2,7 +2,7 @@ import React from 'react';
 // スタイル
 import styled from 'styled-components';
 // 型
-import { careersData } from '../../types/careerData';
+import CareersData from '../../types/CareerData';
 // コンポーネント
 import CarrerTitle from '../atoms/Titles/CarrerTitle';
 import CarrerDateItem from './tabels/CareerDateItem';
@@ -12,7 +12,7 @@ const Carrer = () => {
   return (
     <>
       <ul>
-        {careersData.map((career, index) => (
+        {CareersData.map((career, index) => (
           <CarrerItem key={index}>
             <Header>
               <ul>
@@ -24,6 +24,9 @@ const Carrer = () => {
                   period={career.period}
                 />
               </ul>
+              <ImgWrap>
+                <Img src={career.image} alt={career.imageTitle} />
+              </ImgWrap>
             </Header>
             <Body>
               <CarrerTitle title={career.title} />
@@ -93,4 +96,12 @@ const Body = styled.div`
 
 const Text = styled.p`
   font-size: 1.5rem;
+  line-height: 1.5;
 `;
+
+const ImgWrap = styled.div`
+  width: 100%;
+`
+const Img = styled.img`
+  width: 100%;
+`
