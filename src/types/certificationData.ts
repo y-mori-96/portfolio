@@ -26,13 +26,18 @@ const CertificationsData: CertificationData[] = [
     comment: `\n`,
   },
   {
+    title: "家電製品アドバイザー",
+    date: "2019(平成31)年 1月",
+    comment: `\n`,
+  },
+  {
     title: "普通自動車第一種 運転免許",
     date: "2017(平成29)年 1月",
     comment: `\n`,
   },
   {
     title: "MOS Excel 2013",
-    date: "2015(平成27)年 9月",
+    date: "2015(平成27)年 12月",
     comment: `\n`,
   },
   {
