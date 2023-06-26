@@ -1,4 +1,3 @@
-import noImage from '../images/noImg.png';
 import pbl from '../images/pbl.jpg';
 
 type CareerData = {
@@ -22,7 +21,7 @@ const CareersData: CareerData[] = [
     outState: "修了",
     period: "4ヶ月",
     title: "職業訓練校\n\nWebデザインコース",
-    text: `Adobe製のデザインツール、WordPressの構築経験を積みたく入校。\n\nIllustrator / Photoshop / XD / Excel / Word / PowerPoint / \nHTML / CSS / jQuery / WordPress を学習。\n\n現在転職活動中`,
+    text: `Adobe製のデザインツール、WordPressの構築経験を積みたく入校。\n\nIllustrator / Photoshop / XD / Excel / Word / PowerPoint / \nHTML / CSS / Sass / jQuery / WordPress を学習。\n\n現在転職活動中`,
   },
   {
     inDate: new Date(2022, 11, 6),
