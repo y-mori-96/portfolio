@@ -26,12 +26,13 @@ export default Header
 /**
  * スタイル
  */
-const Wrapper = styled.div`
+const Wrapper = styled.header`
   display: flex;
   align-items: center;
   height: 80px; /* レスポンシブ時のナビの高さを合わせる */
 
   border: 1px solid black;
+  margin-bottom: 2rem;
 `;
 
 const Logo = styled.div`

@@ -22,5 +22,5 @@ export default Title
 const StyledTitle = styled.h2`
   font-size: 3rem;
   text-align: center;
-  margin: 2rem;
+  margin-bottom: 2rem;
 `;

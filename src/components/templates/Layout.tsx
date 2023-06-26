@@ -8,7 +8,11 @@ const Layout = () => {
     <>
       <Wrapper>
         <Header />
-        <Outlet />
+
+        <Main>
+          <Outlet />
+        </Main>
+
         <Footer />
       </Wrapper>
     </>
@@ -24,4 +28,8 @@ const Wrapper = styled.div`
 
   border: 1px solid black;
   background-color: #efefef;
+`;
+
+const Main = styled.main`
+  min-height: calc(100vh - 80px);
 `;
