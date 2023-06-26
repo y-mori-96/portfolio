@@ -77,6 +77,7 @@ export const CardsItemHover = styled(CardsItem)`
 
 export const CardContainer = styled.div`
   width: 100%;
+  height: 100%;
   background-color: #fff;
   box-shadow: 0 2px 4px #00000080;
   border-radius: 4px;
