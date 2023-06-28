@@ -11,9 +11,14 @@ const CertificationsData: CertificationData[] = [
     comment: `ソフトウエア開発者に必要な知識を得ることを目的に取得\n\nレビューやテストなど開発に必要な知識を習得できた`,
   },
   {
+    title: "2級 ウェブデザイン技能士",
+    date: "2023(令和5)年 6月",
+    comment: `Web制作に必要な知識を学習することを目的に取得\n\nHTML/CSSでサイトの簡単な実装ができた`,
+  },
+  {
     title: "3級 ウェブデザイン技能士",
     date: "2022(令和4)年 12月",
-    comment: `Web制作に必要な知識を学習することを目的に取得\n\nHTML/CSSで簡単な実装ができた`,
+    comment: `Web制作に必要な知識を学習することを目的に取得\n\nHTML/CSSでサイトの簡単な修正ができた`,
   },
   {
     title: "SEO検定1級",
