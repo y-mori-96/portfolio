@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // コンポーネント
 // import PageTitle from '../atoms/Titles/PageTitle'
 // import HomeList from '../organisms/HomeList';
+import HomeAbout from '../molecules/HomeAbout';
 import HomeWorks from '../molecules/HomeWorks';
 import HomeSkills from '../molecules/HomeSkills';
 import HomeCertifications from '../molecules/HomeCertifications';
@@ -12,6 +13,9 @@ const Home = () => {
   return (
     <>
       <article>
+        <Section>
+          <HomeAbout />
+        </Section>
         <Section>
           <HomeWorks />
         </Section>
