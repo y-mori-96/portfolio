@@ -23,7 +23,7 @@ const HomeWorks: React.FC = () => {
 export default HomeWorks;
 
 const Article = styled.article`
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 `;
 const Wrapper = styled.div`
   margin-bottom: 2rem;
