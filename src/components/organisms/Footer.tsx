@@ -1,21 +1,39 @@
-import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+// コンポーネント
+import FooterNav from './FooterNav';
 
 const Footer = () => {
   return (
-    <>
-      <StyledFooter>&copy; 2023 森のポートフォリオ. All rights reserved.</StyledFooter>
-    </>
+    <StyledFooter>
+      <Wrapper>
+        <FooterNav/>
+        <Text>
+          <small>
+            &copy; 2023 森 湧汰
+          </small>
+        </Text>
+      </Wrapper>
+    </StyledFooter>
   );
 }
 
 export default Footer
 
 const StyledFooter = styled.footer`
-  text-align: center;
-  height: 80px;
-  line-height: 80px;
-  margin-top: 2rem;
+  background-color: #fff;
+  margin-top: 3rem;
+`;
 
-  border: 1px solid black;
+
+const Wrapper = styled.div`
+  width: 1250px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  padding: 2rem 0;
+`;
+
+const Text = styled.p`
+  text-align: center;
+  color: #000;
 `;
