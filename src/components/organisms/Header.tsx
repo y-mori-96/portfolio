@@ -1,23 +1,24 @@
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 // コンポーネント
-import Nav from './Nav';
+import GlobalNav from './GlobalNav';
+import Logo from '../../images/logo.png';
 
 const Header = () => {
   return (
-    <>
+    <StyledHeader>
       <Wrapper>
         <h1>
           <NavLink to="/">
-            <Logo>
-              ロゴ
-            </Logo>
+            <StyledLogo>
+              <Img src={Logo} alt="森　湧汰" />
+            </StyledLogo>
           </NavLink>
         </h1>
 
-        <Nav />
+        <GlobalNav />
       </Wrapper>
-    </>
+    </StyledHeader>
   );
 }
 
@@ -26,17 +27,26 @@ export default Header
 /**
  * スタイル
  */
-const Wrapper = styled.header`
-  display: flex;
-  align-items: center;
-  height: 80px; /* レスポンシブ時のナビの高さを合わせる */
-
-  border: 1px solid black;
+const StyledHeader = styled.header`
+  background-color: #fff;
   margin-bottom: 2rem;
 `;
 
-const Logo = styled.div`
-  width: 80px;
+const Wrapper = styled.div`
+  width: 1250px;
+  max-width: 100%;
+  margin: 0 auto;
   height: 80px;
-  border: 1px solid black;
+  padding: 10px 0;
+
+  display: flex;
+  align-items: center;
+`;
+const StyledLogo = styled.div`
+  width: 60px;
+  height: 60px;
+`;
+
+const Img = styled.img`
+  width: 100%;
 `;

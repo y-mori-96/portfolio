@@ -5,27 +5,27 @@ import styled from 'styled-components';
 /**
  * 型
  */
-interface ListProps {
+type ListProps = {
   isOpen: boolean;
 }
 
-interface ItemProps {
+type ItemProps = {
   isOpen: boolean;
   onClick: () => void;
 }
 
-interface BurgerIconProps {
+type BurgerIconProps = {
   onClick: () => void;
 }
 
-interface BurgerIconBarProps {
+type BurgerIconBarProps = {
   isOpen: boolean;
 }
 
 /**
  * コンポーネント
  */
-const Nav = () => {
+const GlobalNav = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -54,25 +54,23 @@ const Nav = () => {
   );
 }
 
-export default Nav;
+export default GlobalNav;
 
 /**
  * スタイル
  */
 const StyledNav = styled.nav`
   margin: 0 0 0 auto;
-
-  @media (max-width: 768px) {
-
-  }
 `;
 
 const List = styled.ul<ListProps>`
   display: flex;
+  gap: 1rem;
 
   @media (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? 'flex' : 'flex')};
     flex-direction: column;
+    gap: 0;
 
     position: absolute;
     top: 80px; /*ヘッダーの高さ*/
@@ -81,24 +79,19 @@ const List = styled.ul<ListProps>`
 `;
 
 const Item = styled.li<ItemProps>`
-  margin-right: 1rem;
   font-size: 1.5em;
-
-  &:last-child {
-    margin-right: 0;
-  }
 
   @media (max-width: 768px) {
     margin-right: 0;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
     width: 100vw;
-    height: 15vh;
+    height: 20vh;
     text-align: center;
-    background-color: #000;
-    border: 1px solid #ccc;
+    background-color: #85A389;
+    border: 1px solid #fff;
 
     &:hover {
-      background-color: #ccc;
+      background-color: #aec7b2;
     }
   }
 `;
@@ -141,7 +134,7 @@ const BurgerIconBar = styled.span<BurgerIconBarProps>`
     width: 100%;
     height: 4px;
     border-radius: 100px;
-    background-color: #000;
+    background-color: #85A389;
 
     position: absolute;
 
