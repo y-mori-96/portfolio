@@ -29,7 +29,6 @@ export default Header
  */
 const StyledHeader = styled.header`
   background-color: #fff;
-  margin-bottom: 2rem;
 `;
 
 const Wrapper = styled.div`
