@@ -9,7 +9,7 @@ import noImage from '../../images/noImg.png';
 
 const HomeAbout: React.FC = () => {
   return (
-    <>
+    <Article>
       <HomeTitle title="私について" />
       <Wrapper>
         <ImgWrapper>
@@ -36,12 +36,15 @@ const HomeAbout: React.FC = () => {
         </Body>
       </Wrapper>
       <SeeMoreButton url="/about" />
-    </>
+    </Article>
   );
 };
 
 export default HomeAbout;
 
+const Article = styled.article`
+  margin-bottom: 2rem;
+`;
 const Wrapper = styled.div`
   width: 100%;
   display: flex;
