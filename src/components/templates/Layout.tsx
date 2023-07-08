@@ -5,31 +5,28 @@ import Footer from '../organisms/Footer';
 
 const Layout = () => {
   return (
-    <>
-      <Wrapper>
-        <Header />
+    <Wrapper>
+      <Header />
 
-        <Main>
-          <Outlet />
-        </Main>
+      <Main>
+        <Outlet />
+      </Main>
 
-        <Footer />
-      </Wrapper>
-    </>
+      <Footer />
+    </Wrapper>
   )
 }
 
 export default Layout
 
 const Wrapper = styled.div`
-  width: 1250px;
-  max-width: 100%;
-  margin: 0 auto;
-
-  border: 1px solid black;
-  background-color: #efefef;
+  background-color: #efffe7;
 `;
 
 const Main = styled.main`
-  min-height: calc(100vh - 80px);
+  width: 1250px;
+  max-width: 100%;
+  /* 100vh - ヘッダー - マージン */
+  min-height: calc(100vh - 80px - 2rem);
+  margin: 0 auto;
 `;
