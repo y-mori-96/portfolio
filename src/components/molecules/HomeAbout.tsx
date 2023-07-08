@@ -27,15 +27,16 @@ const HomeAbout: React.FC = () => {
           </Name>
 
           <Text>
-            1996年、兵庫県出身。<br />
+            1996年(27歳)、兵庫県出身。<br />
             大阪工業大学・工学部・電子情報通信工学科を卒業後、<br/>
             家電業界に入社。<br/>
-            3年10ヶ月ほどC言語を用いたソフトウェア開発に従事。<br/>
+            3年10ヶ月ほど、C言語を用いてソフトウェア開発に従事。<br/>
           </Text>
           <Text>
             現在、<br/>
             プログラミングスクールで、<br/>
-            PHP/Laravel/MySQLなどのバックエンドのスキルを学習した後、<br/>
+            HTML/CSS/JavaScriptなどのフロントエンドのスキル、<br/>
+            PHP/Laravel/MySQLなどのバックエンドのスキルを学習。<br/>
           </Text>
           <Text>
             職業訓練校で、<br/>
@@ -45,7 +46,7 @@ const HomeAbout: React.FC = () => {
           </Text>
           <Text>
             「一人でECサイトを構築できる」<br/>
-            スキルを持つWebエンジニアを目指す。
+            Webエンジニアを目指す。
           </Text>
         </Body>
       </Wrapper>
