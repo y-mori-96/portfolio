@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
 // 画像
-import homeAbout from '../../images/home-about.jpg';
+import homeAbout from '../../images/home_about.jpg';
 
 const HomeAbout: React.FC = () => {
   return (

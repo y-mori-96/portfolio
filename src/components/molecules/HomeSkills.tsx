@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
 
-import WebsiteIcon from '../../images/website-icon.svg';
-import DatabaseIcon from '../../images/database-icon.svg';
-import DesignIcon from '../../images/design-icon.svg';
-import ToolsIcon from '../../images/tools-icon.svg';
+import WebsiteIcon from '../../images/website_icon.svg';
+import DatabaseIcon from '../../images/database_icon.svg';
+import DesignIcon from '../../images/design_icon.svg';
+import ToolsIcon from '../../images/tools_icon.svg';
 
 const HomeSkills: React.FC = () => {
   return (
