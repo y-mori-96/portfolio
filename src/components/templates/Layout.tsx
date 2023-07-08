@@ -24,9 +24,6 @@ const Wrapper = styled.div`
 `;
 
 const Main = styled.main`
-  width: 1250px;
-  max-width: 100%;
   /* 100vh - ヘッダー - マージン */
   min-height: calc(100vh - 80px - 2rem);
-  margin: 0 auto;
 `;
