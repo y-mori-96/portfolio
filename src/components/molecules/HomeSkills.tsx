@@ -5,10 +5,10 @@ import styled from 'styled-components';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
 
-import WebsiteIcon from '../../images/website-icon.png';
-import DatabaseIcon from '../../images/database-icon.png';
-import DesignIcon from '../../images/design-icon.png';
-import ToolsIcon from '../../images/tools-icon.png';
+import WebsiteIcon from '../../images/website-icon.svg';
+import DatabaseIcon from '../../images/database-icon.svg';
+import DesignIcon from '../../images/design-icon.svg';
+import ToolsIcon from '../../images/tools-icon.svg';
 
 const HomeSkills: React.FC = () => {
   return (
@@ -78,7 +78,7 @@ const HomeSkills: React.FC = () => {
 export default HomeSkills;
 
 const Article = styled.article`
-  margin-bottom: 2rem;
+  margin-bottom: 10rem;
 `;
 
 const Wrapper = styled.div`
@@ -87,9 +87,15 @@ const Wrapper = styled.div`
   padding: 2rem 0;
   margin-bottom: 2rem;
 
-  border: 1px solid;
+  border: 1px solid #000;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #00000080;
 
   position: relative;
+
+  @media (max-width: 600px) {
+    margin-top: calc(50px + 2rem);
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -98,13 +104,21 @@ const IconWrapper = styled.div`
   line-height: 100px;
   text-align: center;
   border-radius: 50%;
-  background-color: #fffccd;
+  background-color: #aec7b2;
+  border: 1px solid #000;
+  color: #000;
   padding: 1.5rem;
 
   position: absolute;
   top: 50%;
   left: -50px;
   transform: translateY(-50%);
+
+  @media (max-width: 600px) {
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 `;
 const Icon = styled.img`
   width: 100%;
@@ -114,12 +128,26 @@ const Body = styled.div`
   width: 100%;
   height: auto;
   padding-left: calc(50px + 2rem);
+
+  @media (max-width: 600px) {
+    padding: 0 1rem;
+  }
+
 `;
 const H4 = styled.h4`
   font-size: 2rem;
   margin-bottom: 2rem;
+
+  @media (max-width: 600px) {
+    margin-top: 2rem;
+    font-size: 1.5rem;
+  }
 `;
 const Text = styled.p`
   font-size: 1.5rem;
-  line-height: 1.3;
+  line-height: 1.5;
+
+  @media (max-width: 600px) {
+    font-size: 1rem;
+  }
 `;
