@@ -1,37 +1,33 @@
-// スタイル
 import styled from 'styled-components';
 
-interface Props {
+type Props = {
   title: string;
 }
 
 const WorkTypeTitle = ({ title }: Props) => {
   return (
-    <>
-      <Wrapper>
-        <Title>{title}</Title>
-      </Wrapper>
-    </>
+    <Wrapper>
+      <Title>{title}</Title>
+    </Wrapper>
   );
 };
 
 
-export default WorkTypeTitle
+export default WorkTypeTitle;
 
 /**
  * スタイル
  */
 const Wrapper = styled.div`
   width: 100%;
-  height: 50px;
   background-color: white;
   text-align: center;
-  line-height: 50px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px #00000019;
   margin-bottom: 2rem;
 `;
 const Title = styled.h3`
-  font-size: 3rem;
+  font-size: 2rem;
   text-align: center;
+  padding: 1rem;
   margin-bottom: 2rem;
 `;
