@@ -52,7 +52,8 @@ const ImgWrapper = styled.div`
 const Img = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  background-color: #fff;
+  object-fit: contain;
   @media (max-width: 600px) {
     display: none;
   }
@@ -73,7 +74,8 @@ const ResponsiveImg = styled.img`
     display: block;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    background-color: #fff;
+    object-fit: contain;
   }
 `;
 
