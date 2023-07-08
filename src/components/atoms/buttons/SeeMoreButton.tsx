@@ -2,39 +2,43 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
-interface SeeMoreButtonProps {
+type Props = {
   url: string;
 }
 
-const SeeMoreButton: React.FC<SeeMoreButtonProps> = ({ url }) => {
+const SeeMoreButton: React.FC<Props> = ({ url }) => {
   return (
-    <ButtonLink to={url}>
-      もっと見る
-    </ButtonLink>
+    <Wrapper>
+      <ButtonLink to={url}>
+        もっと見る
+      </ButtonLink>
+    </Wrapper>
   );
 };
 
 export default SeeMoreButton;
 
+const Wrapper = styled.div`
+  text-align: center;
+`;
+
 const ButtonLink = styled(NavLink)`
   display: inline-block;
-  padding: 8px 16px;
-  background-color: #e0e0e0;
-  color: #333333;
-  text-decoration: none;
+  padding: 1.5rem 4rem;
+  background-color: #85A389;
   border-radius: 4px;
+
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 2px 4px #00000033;
 
   &:hover {
-    background-color: #cccccc;
+    background-color: #aec7b2;
     transform: translateY(-2px);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  &:active {
-    background-color: #bfbfbf;
-    transform: translateY(0);
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 4px 8px #0000004c;
   }
 `;
