@@ -1,66 +1,22 @@
-import React from 'react';
 import styled from 'styled-components';
 
-/**
- * 型定義
- */
-export type CommonCardProps = {
-  imageSrc: string;
-  title: string;
-  children?: React.ReactNode; // childrenプロパティの追加
-};
-
-/**
- * コンポーネント定義
- */
-const CommonCard: React.FC<CommonCardProps> = ({ imageSrc, title, children }) => {
-  return (
-    <CardContainer>
-      <CardHeader>
-        <Img src={imageSrc} alt={title} />
-      </CardHeader>
-      <CardBody>
-        <Table>
-          <tbody>
-            <tr>
-              <TableHeaderTitle colSpan={2}>{title}</TableHeaderTitle>
-            </tr>
-            {children}
-          </tbody>
-        </Table>
-      </CardBody>
-    </CardContainer>
-  );
-};
-
-export default CommonCard;
-
-/**
- * スタイル
- */
 export const CardsContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   margin: 0 auto;
 
-  @media (max-width: 1200px) and (min-width: 769px) {
+  @media (max-width: 1200px) and (min-width: 601px) {
     grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 768px) and (min-width: 601px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  @media (max-width: 600px) and (min-width: 376px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
   }
 `;
 
 export const CardsItem = styled.div`
   max-width: 400px;
+  height: 100%;
 
   @media (max-width: 1200px) {
     width: 100%;
@@ -87,27 +43,6 @@ export const CardContainer = styled.div`
     height: 100%;
     padding: 1rem;
   }
-`;
-
-const CardHeader = styled.div`
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1rem;
-`;
-
-const Img = styled.img`
-  max-width: 300px;
-
-  @media (max-width: 768px) and (min-width: 601px) {
-    width: 100%;
-  }
-  @media (max-width: 375px) {
-    width: 100%;
-  }
-`;
-
-const CardBody = styled.div`
-  width: 100%;
 `;
 
 export const Table = styled.table`

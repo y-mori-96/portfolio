@@ -1,7 +1,5 @@
 import React from 'react';
-// 型
 import { SkillData } from '../../../types/SkillData';
-// コンポーネント
 import { Table, TableRow, TableHeaderTitle, TableData, CardContainer } from './CommonCard';
 
 /**

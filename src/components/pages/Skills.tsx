@@ -1,16 +1,13 @@
-// コンポーネント
+import { StyledArticle } from '../templates/Article';
 import PageTitle from '../atoms/Titles/PageTitle'
 import SkillsList from '../organisms/SkillsList'
 
-/**
- * コンポーネント定義
- */
 const Skills = () => {
   return (
-    <>
+    <StyledArticle>
       <PageTitle title="スキル" />
       <SkillsList />
-    </>
+    </StyledArticle>
   )
 }
 

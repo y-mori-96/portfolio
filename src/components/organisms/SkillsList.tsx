@@ -1,10 +1,8 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
-// 型
 import SkillsData from '../../types/SkillData'
 import { SkillCategoriesValue } from '../../types/SkillCategories';
 import { SKILLCATEGORIES } from '../../types/SkillCategories';
-// コンポーネント
 import SkillCard from './cards/SkillCard'
 import { CardsContainer, CardsItem } from './cards/CommonCard';
 
@@ -16,7 +14,7 @@ const categories: (SkillCategoriesValue | string)[] = ['すべて', ...Object.va
 /**
  * コンポーネント定義
  */
-const SkillsList: React.FC = () => {
+const SkillsList = () => {
   const [checkedCategories, setCheckedCategories] = useState<string[]>(['すべて']);
 
   const handleCheckboxChange = (value: string) => {
@@ -51,6 +49,7 @@ const SkillsList: React.FC = () => {
                 checked={checkedCategories.includes(category)}
                 onChange={() => handleCheckboxChange(category)}
                 value={category}
+                name='category'
               />
               <CheckboxLabel>{category}</CheckboxLabel>
             </CheckboxInputWrapper>
@@ -90,21 +89,12 @@ const CheckboxContainer = styled.div`
   gap: 1.5rem;
   margin-bottom: 1.5rem;
 
-  @media (max-width: 1200px) and (min-width: 769px) {
+  @media (max-width: 1200px) and (min-width: 601px) {
     grid-template-columns: repeat(2, 1fr);
     gap: 0.5rem;
   }
-  @media (max-width: 768px) and (min-width: 601px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-  @media (max-width: 600px) and (min-width: 376px) {
+  @media (max-width: 600px) {
     grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
-  }
-  @media (max-width: 375px) {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 0.5rem;
   }
 `;
 
@@ -123,19 +113,11 @@ const CheckboxInput = styled.input`
   height: 50px; /* CheckboxContainerと共通 */
   margin-right: 1rem;
 
-  @media (max-width: 1200px) and (min-width: 769px) {
+  @media (max-width: 1200px) and (min-width: 601px) {
     width: 30px;
     height: 30px;
   }
-  @media (max-width: 768px) and (min-width: 601px) {
-    width: 30px;
-    height: 30px;
-  }
-  @media (max-width: 600px) and (min-width: 376px) {
-    width: 20px;
-    height: 20px;
-  }
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     width: 20px;
     height: 20px;
   }
@@ -145,10 +127,7 @@ const CheckboxLabel = styled.span`
   font-size: 1.5rem;
   text-align: center;
 
-  @media (max-width: 600px) and (min-width: 376px) {
-    font-size: 1rem;
-  }
-  @media (max-width: 375px) {
+  @media (max-width: 600px) {
     font-size: 1rem;
   }
 `;
