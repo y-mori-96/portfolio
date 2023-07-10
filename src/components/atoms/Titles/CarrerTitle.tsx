@@ -1,12 +1,11 @@
 import React from 'react';
-// スタイル
 import styled from 'styled-components';
 
-interface CarrerTitle {
+type CarrerTitle = {
   title: string;
 }
 
-const Title: React.FC<CarrerTitle> = ({ title }) => {
+const CarrerTitle: React.FC<CarrerTitle> = ({ title }) => {
   return (
     <>
       <StyledTitle>
@@ -22,7 +21,7 @@ const Title: React.FC<CarrerTitle> = ({ title }) => {
   )
 }
 
-export default Title
+export default CarrerTitle;
 
 /**
  * スタイル

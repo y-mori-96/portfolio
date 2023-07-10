@@ -1,49 +1,43 @@
 import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
 import CareersData from '../../types/CareerData';
-// コンポーネント
 import CarrerTitle from '../atoms/Titles/CarrerTitle';
 import CarrerDateItem from './tabels/CareerDateItem';
 
-
 const Carrer = () => {
   return (
-    <>
-      <ul>
-        {CareersData.map((career, index) => (
-          <CarrerItem key={index}>
-            <Header>
-              <ul>
-                <CarrerDateItem
-                  inDate={career.inDate}
-                  inState={career.inState}
-                  outDate={career.outDate}
-                  outState={career.outState}
-                  period={career.period}
-                />
-              </ul>
-              <ImgWrap>
-                <Img src={career.image} alt={career.imageTitle} />
-              </ImgWrap>
-            </Header>
-            <Body>
-              <CarrerTitle title={career.title} />
-              <Text>
-              {/* career.textの値を改行文字 (\n) で分割し、それぞれの行を表示する */}
-                {career.text.split('\n').map((line, index) => (
-                  <React.Fragment key={index}>
-                    {line}
-                    <br />
-                  </React.Fragment>
-                ))}
-              </Text>
-            </Body>
-          </CarrerItem>
-        ))}
-      </ul>
-    </>
+    <ul>
+      {CareersData.map((career, index) => (
+        <CarrerItem key={index}>
+          <Header>
+            <ul>
+              <CarrerDateItem
+                inDate={career.inDate}
+                inState={career.inState}
+                outDate={career.outDate}
+                outState={career.outState}
+                period={career.period}
+              />
+            </ul>
+            <ImgWrap>
+              <Img src={career.image} alt={career.imageTitle} />
+            </ImgWrap>
+          </Header>
+          <Body>
+            <CarrerTitle title={career.title} />
+            <Text>
+            {/* career.textの値を改行文字 (\n) で分割し、それぞれの行を表示する */}
+              {career.text.split('\n').map((line, index) => (
+                <React.Fragment key={index}>
+                  {line}
+                  <br />
+                </React.Fragment>
+              ))}
+            </Text>
+          </Body>
+        </CarrerItem>
+      ))}
+    </ul>
   )
 }
 
@@ -63,12 +57,10 @@ const CarrerItem = styled.li`
     margin-bottom: 0;
   }
 
-  /* border: 1px solid black; */
   background-color: white;
 
   &:hover {
-    transform: scale(1.05); /* 拡大するスケール値を指定 */
-    /* 他の拡大に関連するスタイルを追加 */
+    transform: scale(1.05);
   }
 
   @media (max-width: 1200px) {

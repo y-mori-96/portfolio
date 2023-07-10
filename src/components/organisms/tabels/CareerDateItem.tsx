@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-interface CarrerDateItemProps {
+type Props = {
   inDate: Date;
   inState: string;
   outDate: Date;
@@ -9,7 +9,7 @@ interface CarrerDateItemProps {
   period: string;
 }
 
-const CarrerDateItem: React.FC<CarrerDateItemProps> = ({ inDate, inState, outDate, outState, period }) => {
+const CarrerDateItem: React.FC<Props> = ({ inDate, inState, outDate, outState, period }) => {
   const inDateText = `${inDate.getFullYear()}年${inDate.getMonth() + 1}月${inDate.getDate()}日`;
   const outDateText = `${outDate.getFullYear()}年${outDate.getMonth() + 1}月${outDate.getDate()}日`;
 
