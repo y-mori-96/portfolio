@@ -1,7 +1,7 @@
 // スタイル
 import styled from 'styled-components';
 
-interface Props {
+type Props = {
   title: string;
 }
 
@@ -20,7 +20,7 @@ export default HomeTitle
  * スタイル
  */
 const Title = styled.h3`
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
 `;

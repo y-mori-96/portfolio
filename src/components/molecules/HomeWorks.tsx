@@ -1,7 +1,6 @@
 import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
+import ScrollAnimation from '../atoms/animation/ScrollAnimation';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import WorkTypeTitle from '../atoms/Titles/WorkTypeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
@@ -9,20 +8,28 @@ import WorksList from '../organisms/WorksList'
 
 const HomeWorks: React.FC = () => {
   return (
-    <Article>
-      <HomeTitle title="制作物" />
+    <Contents>
+      <ScrollAnimation animationType="bottomTop">
+        <HomeTitle title="制作物" />
+      </ScrollAnimation>
       <Wrapper>
-        <WorkTypeTitle title="個人開発"/>
-        <WorksList />
+        <ScrollAnimation animationType="bottomTop">
+          <WorkTypeTitle title="個人開発"/>
+        </ScrollAnimation>
+        <ScrollAnimation animationType="bottomTop">
+          <WorksList />
+        </ScrollAnimation>
       </Wrapper>
-      <SeeMoreButton url="/works" />
-    </Article>
+      <ScrollAnimation animationType="bottomTop">
+        <SeeMoreButton url="/works" />
+      </ScrollAnimation>
+    </Contents>
   );
 };
 
 export default HomeWorks;
 
-const Article = styled.article`
+const Contents = styled.div`
   margin-bottom: 10rem;
 `;
 const Wrapper = styled.div`

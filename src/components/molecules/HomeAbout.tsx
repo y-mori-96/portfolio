@@ -1,63 +1,83 @@
 import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
+import ScrollAnimation from '../atoms/animation/ScrollAnimation';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
-// 画像
 import homeAbout from '../../images/home_about.jpg';
 
 const HomeAbout: React.FC = () => {
   return (
-    <Article>
-      <HomeTitle title="私について" />
+    <Contents>
+      <ScrollAnimation animationType="bottomTop">
+        <HomeTitle title="私について" />
+      </ScrollAnimation>
       <Wrapper>
         <ImgWrapper>
-          <Img src={homeAbout} alt="森湧汰" />
+          <ScrollAnimation animationType="left">
+            <Img src={homeAbout} alt="森湧汰" />
+          </ScrollAnimation>
         </ImgWrapper>
         <Body>
-          <Name>
-          <ruby>
-            森<rp>（</rp><rt>Mori</rt><rp>）</rp>
-          </ruby>
-          <span> </span>
-          <ruby>
-            湧汰<rp>（</rp><rt>Yuta</rt><rp>）</rp>
-          </ruby>
-          </Name>
+          <ScrollAnimation animationType="bottomTop">
+            <Name>
+              <ruby>
+                森<rp>（</rp><rt>Mori</rt><rp>）</rp>
+              </ruby>
+              <span> </span>
+              <ruby>
+                湧汰<rp>（</rp><rt>Yuta</rt><rp>）</rp>
+              </ruby>
+            </Name>
+          </ScrollAnimation>
 
-          <Text>
-            1996年(27歳)、兵庫県出身。<br />
-            大阪工業大学・工学部・電子情報通信工学科を卒業後、<br/>
-            家電業界に入社。<br/>
-            3年10ヶ月ほど、C言語を用いてソフトウェア開発に従事。<br/>
-          </Text>
-          <Text>
-            現在、<br/>
-            プログラミングスクールで、<br/>
-            HTML/CSS/JavaScriptなどのフロントエンドのスキル、<br/>
-            PHP/Laravel/MySQLなどのバックエンドのスキルを学習。<br/>
-          </Text>
-          <Text>
-            職業訓練校で、<br/>
-            illustrator/Photoshop/XDなどのデザインツール、<br/>
-            HTML/CSS/Sass/jQueryなどのフロントエンドのスキル、<br/>
-            WordPressを学習。<br/>
-          </Text>
-          <Text>
-            「一人でECサイトを構築できる」<br/>
-            Webエンジニアを目指す。
-          </Text>
+          <ScrollAnimation animationType="bottomTop">
+            <Text>
+              1996年(27歳)、兵庫県出身。<br />
+              大阪工業大学・工学部・電子情報通信工学科を卒業後、<br/>
+              家電業界に入社。<br/>
+              3年10ヶ月ほど、C言語を用いてソフトウェア開発に従事。<br/>
+            </Text>
+          </ScrollAnimation>
+
+          <ScrollAnimation animationType="bottomTop">
+            <Text>
+              現在、<br/>
+              プログラミングスクールで、<br/>
+              HTML/CSS/JavaScriptなどのフロントエンドのスキル、<br/>
+              PHP/Laravel/MySQLなどのバックエンドのスキルを学習。<br/>
+            </Text>
+          </ScrollAnimation>
+
+          <ScrollAnimation animationType="bottomTop">
+            <Text>
+              職業訓練校で、<br/>
+              illustrator/Photoshop/XDなどのデザインツール、<br/>
+              HTML/CSS/Sass/jQueryなどのフロントエンドのスキル、<br/>
+              WordPressを学習。<br/>
+            </Text>
+          </ScrollAnimation>
+
+          <ScrollAnimation animationType="bottomTop">
+            <Text>
+              「一人でECサイトを構築できる」<br/>
+              Webエンジニアを目指す。
+            </Text>
+          </ScrollAnimation>
+
         </Body>
       </Wrapper>
-      <SeeMoreButton url="/about" />
-    </Article>
+
+      <ScrollAnimation animationType="bottomTop">
+        <SeeMoreButton url="/about" />
+      </ScrollAnimation>
+    </Contents>
   );
 };
 
 export default HomeAbout;
 
-const Article = styled.article`
+const Contents = styled.div`
+  margin-top: 5rem;
   margin-bottom: 10rem;
 `;
 const Wrapper = styled.div`
@@ -81,7 +101,7 @@ const ImgWrapper = styled.div`
 `;
 const Img = styled.img`
   width: 100%;
-  `;
+`;
 const Body = styled.div`
   width: 60%;
 `;

@@ -1,35 +1,39 @@
-import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
+import ScrollAnimation from '../atoms/animation/ScrollAnimation';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
-// 画像
 import Certification from '../../images/certification.png';
 
-const HomeCertifications: React.FC = () => {
+const HomeCertifications = () => {
   return (
-    <Article>
+    <Contents>
       <Container>
         <Body>
-          <HomeTitle title="資格" />
-          <ResponsiveImgWrapper>
-            <ResponsiveImg src={Certification} alt="資格"/>
-          </ResponsiveImgWrapper>
-          <Text>体系的な知識習得も欠かしません</Text>
-          <SeeMoreButton url="/certifications" />
+          <ScrollAnimation animationType="left">
+            <HomeTitle title="資格" />
+            <ResponsiveImgWrapper>
+              <ResponsiveImg src={Certification} alt="資格"/>
+            </ResponsiveImgWrapper>
+            <Text>体系的な知識習得も欠かしません</Text>
+            <SeeMoreButton url="/certifications" />
+          </ScrollAnimation>
         </Body>
-        <ImgWrapper>
-          <Img src={Certification} alt="資格"/>
-        </ImgWrapper>
+        <ImgContainer>
+          <ScrollAnimation animationType="right">
+            <ImgWrapper>
+              <Img src={Certification} alt="資格"/>
+            </ImgWrapper>
+          </ScrollAnimation>
+        </ImgContainer>
       </Container>
-    </Article>
+    </Contents>
   );
 };
 
 export default HomeCertifications;
 
-const Article = styled.article`
+
+const Contents = styled.div`
   @media (max-width: 600px) {
     margin-bottom: 5rem;
   }
@@ -41,8 +45,11 @@ const Container = styled.div`
     flex-direction: column;
   }
 `;
-const ImgWrapper = styled.div`
+const ImgContainer = styled.div`
   width: 50%;
+`;
+const ImgWrapper = styled.div`
+  width: 100%;
   height: 400px;
   @media (max-width: 768px) {
     height: 300px;
@@ -60,7 +67,6 @@ const Img = styled.img`
     display: none;
   }
 `;
-
 const ResponsiveImgWrapper = styled.div`
   display: none;
   @media (max-width: 600px) {

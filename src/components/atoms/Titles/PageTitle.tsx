@@ -1,20 +1,18 @@
 import styled from 'styled-components';
 
-interface TitleProps {
+type Props = {
   title: string;
 }
 
-const Title: React.FC<TitleProps> = ({ title }) => {
+const PageTitle: React.FC<Props> = ({ title }) => {
   return (
-    <>
-      <StyledTitle>
-        {title}
-      </StyledTitle>
-    </>
+    <StyledTitle>
+      {title}
+    </StyledTitle>
   )
 }
 
-export default Title
+export default PageTitle;
 
 /**
  * スタイル

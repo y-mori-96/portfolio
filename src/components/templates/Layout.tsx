@@ -1,5 +1,6 @@
 import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
+import PageTopButton from '../atoms/buttons/PageTopButton';
 import Header from '../organisms/Header';
 import Footer from '../organisms/Footer';
 
@@ -13,6 +14,8 @@ const Layout = () => {
       </Main>
 
       <Footer />
+
+      <PageTopButton />
     </Wrapper>
   )
 }

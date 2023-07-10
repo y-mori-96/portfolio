@@ -1,20 +1,21 @@
-import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
+import ScrollAnimation from '../atoms/animation/ScrollAnimation';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
-// 画像
 import Email from '../../images/email.png';
 
-const HomeContact: React.FC = () => {
+const HomeContact = () => {
   return (
-    <article>
-      <Container>
-        <ImgWrapper>
-          <Img src={Email} alt="お問い合わせ"/>
-        </ImgWrapper>
-        <Body>
+    <Container>
+      <ImgContainer>
+        <ScrollAnimation animationType="left">
+          <ImgWrapper>
+            <Img src={Email} alt="お問い合わせ"/>
+          </ImgWrapper>
+        </ScrollAnimation>
+      </ImgContainer>
+      <Body>
+        <ScrollAnimation animationType="right">
           <HomeTitle title="お問い合わせ"/>
           <ResponsiveImgWrapper>
             <ResponsiveImg src={Email} alt="お問い合わせ"/>
@@ -23,14 +24,19 @@ const HomeContact: React.FC = () => {
             詳細ページより<br/>
             お問い合わせください
           </Text>
-          <SeeMoreButton url="/contact" />
-        </Body>
-      </Container>
-    </article>
+          {/* <SeeMoreButton url="/contact" /> */}
+          <SeeMoreButton url="/script/mailform/contact" />
+        </ScrollAnimation>
+      </Body>
+    </Container>
   );
 };
 
 export default HomeContact;
+
+const ImgContainer = styled.div`
+  width: 50%;
+`;
 
 const Container = styled.div`
   display: flex;
@@ -40,7 +46,7 @@ const Container = styled.div`
   }
 `;
 const ImgWrapper = styled.div`
-  width: 50%;
+  width: 100%;
   height: 400px;
   @media (max-width: 768px) {
     height: 300px;

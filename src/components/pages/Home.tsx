@@ -1,6 +1,5 @@
-// スタイル
-import styled from 'styled-components';
 // コンポーネント
+import { StyledSection } from '../templates/Section';
 import HomeAbout from '../molecules/HomeAbout';
 import HomeWorks from '../molecules/HomeWorks';
 import HomeSkills from '../molecules/HomeSkills';
@@ -10,35 +9,27 @@ import HomeHero from '../molecules/HomeHero';
 
 const Home = () => {
   return (
-    <>
-      <article>
-        <section>
-          <HomeHero />
-        </section>
-        <Section>
-          <HomeAbout />
-        </Section>
-        <Section>
-          <HomeWorks />
-        </Section>
-        <Section>
-          <HomeSkills />
-        </Section>
-        <Section>
-          <HomeCertifications />
-        </Section>
-        <Section>
-          <HomeContact />
-        </Section>
-      </article>
-    </>
+    <article>
+      <section>
+        <HomeHero />
+      </section>
+      <StyledSection>
+        <HomeAbout />
+      </StyledSection>
+      <StyledSection>
+        <HomeWorks />
+      </StyledSection>
+      <StyledSection>
+        <HomeSkills />
+      </StyledSection>
+      <StyledSection>
+        <HomeCertifications />
+      </StyledSection>
+      <StyledSection>
+        <HomeContact />
+      </StyledSection>
+    </article>
   )
 }
 
 export default Home;
-
-const Section = styled.section`
-  width: 1250px;
-  max-width: 100%;
-  margin: 0 auto;
-`;

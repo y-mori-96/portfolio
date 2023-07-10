@@ -1,10 +1,8 @@
 import React from 'react';
-// スタイル
 import styled from 'styled-components';
-// 型
+import ScrollAnimation from '../atoms/animation/ScrollAnimation';
 import HomeTitle from '../atoms/Titles/HomeTitle';
 import SeeMoreButton from '../atoms/buttons/SeeMoreButton';
-
 import WebsiteIcon from '../../images/website_icon.svg';
 import DatabaseIcon from '../../images/database_icon.svg';
 import DesignIcon from '../../images/design_icon.svg';
@@ -12,72 +10,84 @@ import ToolsIcon from '../../images/tools_icon.svg';
 
 const HomeSkills: React.FC = () => {
   return (
-    <Article>
-      <HomeTitle title="スキル" />
-      <Wrapper>
-        <IconWrapper>
-          <Icon src={WebsiteIcon} alt="フロントエンド" />
-        </IconWrapper>
-        <Body>
-          <H4>フロントエンド</H4>
-          <Text>
-            HTML<br/>
-            CSS / Sass / Styled-components / Tailwind<br/>
-            JavaScript / jQuery / React<br/>
-            TypeScript
-          </Text>
-        </Body>
-      </Wrapper>
+    <Contents>
+      <ScrollAnimation animationType="bottomTop">
+        <HomeTitle title="スキル" />
+      </ScrollAnimation>
+      <ScrollAnimation animationType="bottomTop">
+        <Wrapper>
+          <IconWrapper>
+            <Icon src={WebsiteIcon} alt="フロントエンド" />
+          </IconWrapper>
+          <Body>
+            <H4>フロントエンド</H4>
+            <Text>
+              HTML<br/>
+              CSS / Sass / Styled-components / Tailwind<br/>
+              JavaScript / jQuery / React<br/>
+              TypeScript
+            </Text>
+          </Body>
+        </Wrapper>
+      </ScrollAnimation>
 
-      <Wrapper>
-        <IconWrapper>
-          <Icon src={DatabaseIcon} alt="バックエンド" />
-        </IconWrapper>
-        <Body>
-          <H4>バックエンド</H4>
-          <Text>
-            C<br/>
-            PHP / Laravel<br/>
-            WordPress<br/>
-            MySQL
-          </Text>
-        </Body>
-      </Wrapper>
+      <ScrollAnimation animationType="bottomTop">
+        <Wrapper>
+          <IconWrapper>
+            <Icon src={DatabaseIcon} alt="バックエンド" />
+          </IconWrapper>
+          <Body>
+            <H4>バックエンド</H4>
+            <Text>
+              C<br/>
+              PHP / Laravel<br/>
+              WordPress<br/>
+              MySQL
+            </Text>
+          </Body>
+        </Wrapper>
+      </ScrollAnimation>
 
-      <Wrapper>
-        <IconWrapper>
-          <Icon src={DesignIcon} alt="デザインツール" />
-        </IconWrapper>
-        <Body>
-          <H4>デザインツール</H4>
-          <Text>
-            Illustrator / Photoshop / XD
-          </Text>
-        </Body>
-      </Wrapper>
+      <ScrollAnimation animationType="bottomTop">
+        <Wrapper>
+          <IconWrapper>
+            <Icon src={DesignIcon} alt="デザインツール" />
+          </IconWrapper>
+          <Body>
+            <H4>デザインツール</H4>
+            <Text>
+              Illustrator / Photoshop / XD
+            </Text>
+          </Body>
+        </Wrapper>
+      </ScrollAnimation>
 
-      <Wrapper>
-        <IconWrapper>
-          <Icon src={ToolsIcon} alt="開発ツール" />
-        </IconWrapper>
-        <Body>
-          <H4>開発ツール</H4>
-          <Text>
-            Git / Github<br/>
-            Excel / Word / PowerPoint / Outlook<br/>
-            VScode / サクラエディタ<br/>
-          </Text>
-        </Body>
-      </Wrapper>
+      <ScrollAnimation animationType="bottomTop">
+        <Wrapper>
+          <IconWrapper>
+            <Icon src={ToolsIcon} alt="開発ツール" />
+          </IconWrapper>
+          <Body>
+            <H4>開発ツール</H4>
+            <Text>
+              Git / Github<br/>
+              Excel / Word / PowerPoint / Outlook<br/>
+              VScode / サクラエディタ<br/>
+            </Text>
+          </Body>
+        </Wrapper>
+      </ScrollAnimation>
 
-      <SeeMoreButton url="/skills" />
-    </Article>
+      <ScrollAnimation animationType="bottomTop">
+        <SeeMoreButton url="/skills" />
+      </ScrollAnimation>
+    </Contents>
   );
 };
 
 export default HomeSkills;
 
-const Article = styled.article`
+const Contents = styled.div`
   margin-bottom: 10rem;
 `;
 
