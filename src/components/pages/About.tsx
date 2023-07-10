@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
-// スタイル
+import { useState } from 'react';
 import styled from 'styled-components';
-// コンポーネント
+import { StyledArticle } from '../templates/Article';
 import PageTitle from '../atoms/Titles/PageTitle'
 import Career from '../organisms/Career';
 import Private from '../organisms/Private';
@@ -14,7 +13,7 @@ const About = () => {
   }
 
   return (
-    <>
+    <StyledArticle>
       <PageTitle title="私について" />
 
       <TabContainer>
@@ -33,7 +32,7 @@ const About = () => {
       <Section active={toggle === 2}>
         <Private />
       </Section>
-    </>
+    </StyledArticle>
   )
 }
 
@@ -53,18 +52,12 @@ const TabItems = styled.li<{ active: boolean }>`
   font-size: 1.5rem;
   cursor: pointer;
   width: 100%;
-  padding: 10px 20px;
-  background-color: ${({ active }) => (active ? '#ffffff' : 'transparent')};
-  /* border-top: ${({ active }) => (active ? '3px solid black' : 'none')}; */
+  padding: 1rem 2rem;
+  border-bottom: ${({ active }) => (active ? '3px solid #85A389' : 'none')};
 
   &:hover {
-    background-color: #eaeaea;
-    /* background-color: white; */
-  }
-  border: 3px solid black;
-  &:last-child{
-    border-left: none;
-    /* border-left: 3px solid black; */
+    background-color: #aec7b2;
+    color: #fff;
   }
 
   @media (max-width: 600px) {
@@ -74,9 +67,5 @@ const TabItems = styled.li<{ active: boolean }>`
 
 const Section = styled.section<{ active: boolean }>`
   display: ${({ active }) => (active ? 'block' : 'none')};
-
-  padding: 2rem;
-  border: 3px solid black;
-  border-top: none;
-  background-color: white;
+  padding: 2rem 0;
 `;
