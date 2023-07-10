@@ -1,15 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type CarrerTitle = {
+type Title = {
   title: string;
 }
 
-const CarrerTitle: React.FC<CarrerTitle> = ({ title }) => {
+const CarrerTitle: React.FC<Title> = ({ title }) => {
   return (
     <>
       <StyledTitle>
-        {/* {title} */}
         {title.split('\n').map((line, index) => (
           <React.Fragment key={index}>
             {line}
