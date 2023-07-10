@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-// 型
-import { worksData } from "../../types/workData";
-// コンポーネント
+import styled from 'styled-components';
+import { WorksData } from "../../types/WorkData";
 import WorkCard from "./cards/WorkCard";
-import { CardsContainer, CardsItemHover } from "./cards/CommonCard";
 import PortfolioModal from "./modals/PortfolioModal";
 import ForestCodeModal from "./modals/ForestCodeModal";
 
@@ -25,15 +23,15 @@ const WorksList: React.FC = () => {
     <>
       {/* カード */}
       <CardsContainer>
-        {worksData.map((work, index) => (
-          <CardsItemHover key={index} onClick={() => openModal(work.modal)}>
+        {WorksData.map((work, index) => (
+          <CardsItem key={index} onClick={() => openModal(work.modal)}>
             <WorkCard
               key={work.title}
               imageSrc={work.imageSrc}
               title={work.title}
               dsescription={work.dsescription}
             />
-          </CardsItemHover>
+          </CardsItem>
         ))}
       </CardsContainer>
 
@@ -45,3 +43,34 @@ const WorksList: React.FC = () => {
 };
 
 export default WorksList;
+
+/**
+ * スタイル
+ */
+const CardsContainer = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto;
+
+  @media (max-width: 1200px) and (min-width: 601px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media (max-width: 600px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
+`;
+
+export const CardsItem = styled.div`
+  max-width: 400px;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+
+  @media (max-width: 1200px) {
+    width: 100%;
+    margin: 0 auto;
+  }
+`;

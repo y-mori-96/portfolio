@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import SiteButton from '../atoms/buttons/SiteButtom';
-// 画像
-
 
 /**
  * 型定義
@@ -53,9 +51,13 @@ const Outline = styled.div`
   height: auto;
   padding: 2rem;
 
-  background-color: #ccc;
+  background-color: #efffe7;
 
   margin-bottom: 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 const OutlineImgWrapper = styled.div`
@@ -69,7 +71,10 @@ const OutlineImg = styled.img`
 
 const OutlineBody = styled.div`
   width: 40%;
-  text-align: left;
+  text-align: center;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Genre = styled.h4`

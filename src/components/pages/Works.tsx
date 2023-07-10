@@ -1,18 +1,19 @@
-// スタイル
-import styled from 'styled-components';
-// コンポーネント
-import PageTitle from '../atoms/Titles/PageTitle'
-import WorkTypeTitle from '../atoms/Titles/WorkTypeTitle'
-import WorksList from '../organisms/WorksList'
+import { StyledArticle } from '../templates/Article';
+import { StyledSection } from '../templates/Section';
+import PageTitle from '../atoms/Titles/PageTitle';
+import WorkTypeTitle from '../atoms/Titles/WorkTypeTitle';
+import WorksList from '../organisms/WorksList';
 
 const Works = () => {
   return (
-    <>
+    <StyledArticle>
       <PageTitle title="制作物" />
-      <WorkTypeTitle title="個人開発"/>
-      <WorksList />
-    </>
+      <StyledSection>
+        <WorkTypeTitle title="個人開発"/>
+        <WorksList />
+      </StyledSection>
+    </StyledArticle>
   )
 }
 
-export default Works
+export default Works;

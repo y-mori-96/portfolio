@@ -15,7 +15,7 @@ export type WorkData = {
   modal: string;
 };
 
-export const worksData: WorkData[] = [
+export const WorksData: WorkData[] = [
   {
     imageSrc: noImage,
     title: "森のポートフォリオ",

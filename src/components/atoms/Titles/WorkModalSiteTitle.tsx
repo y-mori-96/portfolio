@@ -1,15 +1,12 @@
-// スタイル
 import styled from 'styled-components';
 
-interface Props {
+type Props = {
   title: string;
 }
 
 const WorkModalSiteTitle = ({ title }: Props) => {
   return (
-    <>
-      <Title>{title}</Title>
-    </>
+    <Title>{title}</Title>
   );
 };
 

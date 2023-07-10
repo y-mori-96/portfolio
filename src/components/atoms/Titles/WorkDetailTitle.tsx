@@ -1,15 +1,12 @@
-// スタイル
 import styled from 'styled-components';
 
-interface WorkDetailTitleProps {
+type Props = {
   title: string;
 }
 
-const WorkDetailTitle = ({ title }: WorkDetailTitleProps) => {
+const WorkDetailTitle = ({ title }: Props) => {
   return (
-    <>
-      <Title>{title}</Title>
-    </>
+    <Title>{title}</Title>
   );
 };
 
