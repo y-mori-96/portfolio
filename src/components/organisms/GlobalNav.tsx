@@ -84,18 +84,12 @@ const List = styled.ul<ListProps>`
 const Item = styled.li<ItemProps>`
   font-size: 1.5em;
 
+
   @media (max-width: 768px) {
     margin-right: 0;
     display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
     width: 100vw;
-    height: 20vh;
-    text-align: center;
-    background-color: #85A389;
-    border: 1px solid #fff;
-
-    &:hover {
-      background-color: #aec7b2;
-    }
+    height: 10vh;
   }
 `;
 
@@ -103,9 +97,16 @@ const StyledNavLink = styled(NavLink)`
   color: #000;
   text-decoration: none;
 
+  &:hover {
+    text-decoration: underline;
+  }
+
   @media (max-width: 768px) {
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
+    background-color: #85A389;
+    border: 1px solid #fff;
     color: #fff;
 
     display: flex;
@@ -114,6 +115,11 @@ const StyledNavLink = styled(NavLink)`
 
     width: 100%;
     height: 100%;
+
+    &:hover {
+      background-color: #aec7b2;
+      text-decoration: none;
+    }
   }
 `;
 
