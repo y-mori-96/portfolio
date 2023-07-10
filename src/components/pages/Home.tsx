@@ -1,4 +1,5 @@
-// コンポーネント
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { StyledSection } from '../templates/Section';
 import HomeAbout from '../molecules/HomeAbout';
 import HomeWorks from '../molecules/HomeWorks';
@@ -8,6 +9,12 @@ import HomeContact from '../molecules/HomeContact';
 import HomeHero from '../molecules/HomeHero';
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // スムーズにトップにスクロールする
+  }, [location]);
+
   return (
     <article>
       <section>
