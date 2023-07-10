@@ -71,8 +71,7 @@ const Button = styled.a`
   animation: ${fadeIn} 0.5s ease-in-out;
 
   @media (max-width: 600px) {
-    transform: translateX(50%);
-    right: 50%;
+    display: none;
   }
 `;
 
