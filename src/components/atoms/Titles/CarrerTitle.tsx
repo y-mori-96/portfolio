@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
 
-type Title = {
+type Props = {
   title: string;
 }
 
-const CarrerTitle: React.FC<Title> = ({ title }) => {
+const CarrerTitle: React.FC<Props> = ({ title }) => {
   return (
     <>
       <StyledTitle>
@@ -31,4 +31,8 @@ const StyledTitle = styled.h3`
   border-bottom: 1px solid #000;
   padding-bottom: 1rem;
   margin-bottom: 1rem;
+
+  @media (max-width: 600px){
+    font-size: 1.5rem;
+  }
 `;

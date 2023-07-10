@@ -7,4 +7,8 @@ export const Wrapper = styled.div`
 export const Text = styled.p`
   font-size: 1.5rem;
   line-height: 1.3;
+
+  @media (max-width: 600px){
+    font-size: 1rem;
+  }
 `;

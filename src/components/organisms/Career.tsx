@@ -89,6 +89,9 @@ const Body = styled.div`
 const Text = styled.p`
   font-size: 1.5rem;
   line-height: 1.5;
+  @media (max-width: 600px){
+    font-size: 1rem;
+  }
 `;
 
 const ImgWrap = styled.div`

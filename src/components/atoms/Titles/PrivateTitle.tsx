@@ -20,4 +20,8 @@ const Title = styled.h3`
   font-size: 2rem;
   text-align: center;
   margin-bottom: 1rem;
+
+  @media (max-width: 600px){
+    font-size: 1.5rem;
+  }
 `;
