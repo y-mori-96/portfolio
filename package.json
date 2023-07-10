@@ -1,5 +1,6 @@
 {
-  "name": "portfolio",
+  "homepage": "https://y-mori-96.com",
+  "name": "Mori's Portfolio",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
