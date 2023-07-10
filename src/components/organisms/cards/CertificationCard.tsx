@@ -1,8 +1,6 @@
 import React from 'react';
-//　型
 import { CertificationData } from '../../../types/CertificationData';
-// コンポーネント
-import { Table, TableHeaderTitle, TableHeaderData, TableData, CardContainer } from './CommonCard';
+import { CardContainer, Table, TableHeaderTitle, TableHeaderData, TableData } from './CommonCard';
 
 /**
  * コンポーネント定義
