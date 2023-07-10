@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import styled from 'styled-components';
 import { StyledArticle } from '../templates/Article';
 import PageTitle from '../atoms/Titles/PageTitle'
@@ -7,6 +8,12 @@ import Private from '../organisms/Private';
 
 const About = () => {
   const [toggle, setToggle] = useState(1);
+
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // スムーズにトップにスクロールする
+  }, [location]);
 
   function updateToggle(id: number) {
     setToggle(id);
