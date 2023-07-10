@@ -41,4 +41,9 @@ const ButtonLink = styled(NavLink)`
     transform: translateY(-2px);
     box-shadow: 0px 4px 8px #0000004c;
   }
+
+  @media (max-width: 600px) {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.5rem;
+  }
 `;
