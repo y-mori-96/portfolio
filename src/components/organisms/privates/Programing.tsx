@@ -1,20 +1,23 @@
-// スタイル
-import {Wrapper, P} from './StyledPrivates';
-// コンポーネント
-import PrivateTitle from '../../atoms/Titles/PrivateTitle'
+import {Wrapper, Text} from './StyledPrivates';
+import PrivateTitle from '../../atoms/Titles/PrivateTitle';
 
 const Programing = () => {
   return (
     <>
       <PrivateTitle title="プログラミング"/>
       <Wrapper>
-        <P>日々、個人開発や資格勉強に励む</P>
+        <Text>日々、個人開発や資格勉強に励む</Text>
       </Wrapper>
       <Wrapper>
-        <P>新しい分野や言語を学習していき、<br/>技術力のレベル上げを楽しんでいる</P>
+        <Text>
+          フロントからバック、デザインなど<br />
+          複数の知識を持ち合わせ、<br />
+          「一人でECサイトを構築できる」<br />
+          Webエンジニアを目指す。
+        </Text>
       </Wrapper>
       <Wrapper>
-        <P>新しい知識を得る際は、<br/>書籍を買い漁り、動画学習サイトも活用する</P>
+        <Text>新しい知識を得る際は、<br/>書籍を買い漁り、動画学習サイトも活用する</Text>
       </Wrapper>
     </>
   )

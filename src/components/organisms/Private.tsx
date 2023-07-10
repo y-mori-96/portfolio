@@ -1,81 +1,82 @@
-import React, { useState, useEffect } from 'react';
-// スタイル
+import { useState, useEffect } from 'react';
 import styled from 'styled-components';
-// コンポーネント
 import Travel from './privates/Travel'
 import Boardgame from './privates/Boardgame'
 import Programing from './privates/Programing'
-// 写真
-import picture1 from '../../images/ito.jpg';
-import picture2 from '../../images/Nature2.jpg';
-import picture3 from '../../images/Nature3.jpg';
-import arrow_left from '../../images/arrow_left.png';
-import arrow_right from '../../images/arrow_right.png';
+import travelImg from '../../images/private-travel.jpg';
+import boadgameImg from '../../images/private-boadgame.jpg';
+import programingImg from '../../images/private-programing.jpg';
+import arrow_left from '../../images/arrow_left.svg';
+import arrow_right from '../../images/arrow_right.svg';
 
 
 const Private = () => {
-  const images = [picture1, picture2, picture3];
+  const images = [travelImg, boadgameImg, programingImg];
+  const imagesAlt = ["海外旅行", "ボードゲーム", "プログラミング"];
   const [currentImage, setCurrentImage] = useState(0);
   const [currentContent, setCurrentContent] = useState(0);
 
   useEffect(() => {
-    // 5秒ごとに画像とコンテンツを更新
-    // const interval = setInterval(() => {
-    //   setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    //   setCurrentContent((prevContent) => (prevContent + 1) % 3); // 3つのコンテンツがある場合
-    // }, 5000);
+    const interval = setInterval(() => {
+      setCurrentImage((prevImage) => (prevImage + 1) % images.length);
+      setCurrentContent((prevContent) => (prevContent + 1) % 3);
+    }, 10000);
 
-    // return () => {
-    //   clearInterval(interval);
-    // };
+    return () => {
+      clearInterval(interval);
+    };
   }, [images.length]);
 
   const goToPreviousImage = () => {
     setCurrentImage((prevImage) => (prevImage === 0 ? images.length - 1 : prevImage - 1));
-    setCurrentContent((prevContent) => (prevContent === 0 ? 2 : prevContent - 1)); // 3つのコンテンツがある場合
+    setCurrentContent((prevContent) => (prevContent === 0 ? 2 : prevContent - 1));
   };
 
   const goToNextImage = () => {
     setCurrentImage((prevImage) => (prevImage + 1) % images.length);
-    setCurrentContent((prevContent) => (prevContent + 1) % images.length); // 3つのコンテンツがある場合
+    setCurrentContent((prevContent) => (prevContent + 1) % images.length);
   };
 
   const goToImage = (index: number) => {
     setCurrentImage(index);
-    setCurrentContent(index % images.length); // 3つのコンテンツがある場合
+    setCurrentContent(index % images.length);
   };
 
   return (
-    <>
-      <Wrapper>
-        <ContentsWrapper>
-          <Contents>
-            <CarouselContainer>
-              <CarouselImage src={images[currentImage]} alt="プライベート画像" />
-            </CarouselContainer>
-          </Contents>
-          <Contents>
-            {currentContent === 0 && <Travel />}
-            {currentContent === 1 && <Boardgame />}
-            {currentContent === 2 && <Programing />}
-          </Contents>
-        </ContentsWrapper>
+    <Wrapper>
+      <ContentsWrapper>
+        <Contents>
+          <CarouselContainer>
+            <CarouselImage src={images[currentImage]} alt={imagesAlt[currentImage]} />
+          </CarouselContainer>
+        </Contents>
+        <Contents>
+          {currentContent === 0 && <Travel />}
+          {currentContent === 1 && <Boardgame />}
+          {currentContent === 2 && <Programing />}
+        </Contents>
+      </ContentsWrapper>
 
-        <NavigationWrapper>
-          <Navigation>
+      <NavigationWrapper>
+        <Navigation>
 
+          <ImgWrapper>
             <Img src={arrow_left} alt="戻る" onClick={goToPreviousImage} />
-            <Dots>
-              {images.map((_, index) => (
-                <Dot key={index} active={index === currentImage} onClick={() => goToImage(index)} />
-              ))}
-            </Dots>
-            <Img src={arrow_right} alt="次へ" onClick={goToNextImage} />
+          </ImgWrapper>
 
-          </Navigation>
-        </NavigationWrapper>
-      </Wrapper>
-    </>
+          <Dots>
+            {images.map((_, index) => (
+              <Dot key={index} active={index === currentImage} onClick={() => goToImage(index)} />
+            ))}
+          </Dots>
+
+          <ImgWrapper>
+            <Img src={arrow_right} alt="次へ" onClick={goToNextImage} />
+          </ImgWrapper>
+
+        </Navigation>
+      </NavigationWrapper>
+    </Wrapper>
   );
 }
 
@@ -95,6 +96,8 @@ const Wrapper = styled.div`
 const ContentsWrapper = styled.div`
   display: flex;
   margin-bottom: 1rem;
+  background-color: #fff;
+  box-shadow: 0 2px 4px #00000080;
 
   @media (max-width: 600px) {
     flex-direction: column-reverse;
@@ -103,7 +106,6 @@ const ContentsWrapper = styled.div`
 
 const Contents = styled.div`
   width: 100%;
-  border: 1px solid black;
   padding: 1.5rem;
 `;
 
@@ -131,8 +133,13 @@ const Navigation = styled.div`
   align-items: center;
 `;
 
-const Img = styled.img`
+const ImgWrapper = styled.div`
+  width: 40px;
+  height: 40px;
   cursor: pointer;
+`;
+const Img = styled.img`
+  width: 100%;
 `;
 
 const Dots = styled.div`
@@ -152,7 +159,7 @@ const Dots = styled.div`
 `;
 
 const Dot = styled.div<{ active: boolean }>`
-  background-color: ${({ active }) => (active ? 'black' : 'gray')};
+  background-color: ${({ active }) => (active ? '#85A389' : '#aec7b2')};
 
   width: 20px;
   height: 20px;

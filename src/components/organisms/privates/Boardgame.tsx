@@ -1,6 +1,4 @@
-// スタイル
-import {Wrapper, P} from './StyledPrivates';
-// コンポーネント
+import {Wrapper, Text} from './StyledPrivates';
 import PrivateTitle from '../../atoms/Titles/PrivateTitle'
 
 const Boardgame = () => {
@@ -8,13 +6,18 @@ const Boardgame = () => {
     <>
       <PrivateTitle title="ボードゲーム" />
       <Wrapper>
-        <P>現在、〇個所持</P>
+        <Text>現在、63個所持</Text>
       </Wrapper>
       <Wrapper>
-        <P>ルールが簡単で、老若男女問わず誰でも遊べ、経験差が出ない点に魅力を感じる</P>
+        <Text>
+          ・簡単なルール<br />
+          ・老若男女問わず誰でも遊べる<br />
+          ・初心者でも勝てる<br />
+          点に魅力を感じる
+        </Text>
       </Wrapper>
       <Wrapper>
-        <P>分かりやすくルールを説明する能力など、<br/>仕事に必要な能力も養うことができる</P>
+        <Text>協力系や心理戦が楽しめるゲームが好き</Text>
       </Wrapper>
     </>
   )

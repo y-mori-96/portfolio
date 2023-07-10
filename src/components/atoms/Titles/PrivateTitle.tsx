@@ -1,15 +1,12 @@
-// スタイル
 import styled from 'styled-components';
 
-interface PrivateTitleProps {
+type Props = {
   title: string;
 }
 
-const PrivateTitle = ({ title }: PrivateTitleProps) => {
+const PrivateTitle = ({ title }: Props) => {
   return (
-    <>
-      <Title>{title}</Title>
-    </>
+    <Title>{title}</Title>
   );
 };
 

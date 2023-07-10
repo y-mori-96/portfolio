@@ -1,6 +1,4 @@
-// スタイル
-import {Wrapper, P} from './StyledPrivates';
-// コンポーネント
+import {Wrapper, Text} from './StyledPrivates';
 import PrivateTitle from '../../atoms/Titles/PrivateTitle'
 
 const Travel = () => {
@@ -8,13 +6,13 @@ const Travel = () => {
     <>
       <PrivateTitle title="海外旅行" />
       <Wrapper>
-        <P>カバン一つで世界各国を飛び回るバックパッカー</P>
-        <P>現在、28ヶ国訪問中</P>
+        <Text>カバン一つで世界各国を飛び回るバックパッカー</Text>
+        <Text>現在、28ヶ国訪問中</Text>
       </Wrapper>
       <Wrapper>
-        <P>エアーズロックやマチュピチュなど自然が大好き</P>
+        <Text>エアーズロックやマチュピチュなど自然が大好き</Text>
       </Wrapper>
-      <P>2020年1月1日<br/>キリマンジャロ登頂を果たす</P>
+      <Text>2020年1月1日<br/>キリマンジャロ登頂を果たす</Text>
     </>
   )
 }
