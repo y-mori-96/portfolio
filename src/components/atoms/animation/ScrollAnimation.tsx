@@ -18,13 +18,15 @@ const ScrollAnimation = ({ children, animationType }: AnimatedContainerProps) =>
       }
     });
 
-    if (containerRef.current) {
-      observer.observe(containerRef.current);
+    const currentContainerRef = containerRef.current;
+
+    if (currentContainerRef) {
+      observer.observe(currentContainerRef);
     }
 
     return () => {
-      if (containerRef.current) {
-        observer.unobserve(containerRef.current);
+      if (currentContainerRef) {
+        observer.unobserve(currentContainerRef);
       }
     };
   }, []);
