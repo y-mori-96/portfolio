@@ -1,4 +1,3 @@
-import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import { createGlobalStyle } from 'styled-components'
 import reset from 'styled-reset'
@@ -34,7 +33,8 @@ const App = () => {
           <Route path='/works' element={<Works />} />
           <Route path='/skills' element={<Skills />} />
           <Route path='/certifications' element={<Certifications />} />
-          <Route path='/contact' element={<Contact />} />
+          {/* <Route path='/contact' element={<Contact />} /> */}
+          <Route path='/script/mailform/contact/'/>
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>

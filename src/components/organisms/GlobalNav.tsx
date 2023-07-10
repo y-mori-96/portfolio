@@ -46,7 +46,8 @@ const GlobalNav = () => {
           <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/works">制作物</StyledNavLink></Item>
           <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/skills">スキル</StyledNavLink></Item>
           <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/certifications">資格</StyledNavLink></Item>
-          <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></Item>
+          {/* <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></Item> */}
+          <Item isOpen={isOpen} onClick={toggleMenu}><StyledNavLink to="/script/mailform/contact/">お問い合わせ</StyledNavLink></Item>
         </List>
 
       </StyledNav>
@@ -75,6 +76,8 @@ const List = styled.ul<ListProps>`
     position: absolute;
     top: 80px; /*ヘッダーの高さ*/
     right: 0;
+
+    z-index: 5;
   }
 `;
 
