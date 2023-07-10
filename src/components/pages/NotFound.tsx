@@ -1,8 +1,10 @@
+import { StyledArticle } from '../templates/Article';
+
 const NotFound = () => {
   return (
-    <>
-      ページが見つかりませんでした。
-    </>
+    <StyledArticle>
+      404.ページが見つかりませんでした。
+    </StyledArticle>
   )
 }
 
