@@ -9,8 +9,8 @@ const FooterNav = () => {
       <li><StyledNavLink to="/works">制作物</StyledNavLink></li>
       <li><StyledNavLink to="/skills">スキル</StyledNavLink></li>
       <li><StyledNavLink to="/certifications">資格</StyledNavLink></li>
-      {/* <li><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></li> */}
-      <li><StyledNavLink to="/script/mailform/contact/">お問い合わせ</StyledNavLink></li>
+      <li><StyledNavLink to="/contact">お問い合わせ</StyledNavLink></li>
+      {/* <li><StyledNavLink to="/script/mailform/contact/">お問い合わせ</StyledNavLink></li> */}
     </List>
   );
 }

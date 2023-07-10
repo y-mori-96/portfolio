@@ -24,8 +24,8 @@ const HomeContact = () => {
             詳細ページより<br/>
             お問い合わせください
           </Text>
-          {/* <SeeMoreButton url="/contact" /> */}
-          <SeeMoreButton url="/script/mailform/contact" />
+          <SeeMoreButton url="/contact" />
+          {/* <SeeMoreButton url="/script/mailform/contact" /> */}
         </ScrollAnimation>
       </Body>
     </Container>
