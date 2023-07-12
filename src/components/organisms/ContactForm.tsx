@@ -58,7 +58,7 @@ const ContactForm = () => {
             id='company'
             type="text"
             name="company"
-            placeholder="会社名"
+            placeholder="例）〇〇株式会社"
             value={company}
             onChange={(e) => setCompany(e.target.value)}
             required
@@ -71,7 +71,7 @@ const ContactForm = () => {
             id='name'
             type="text"
             name="name"
-            placeholder="お名前"
+            placeholder="例）鈴木　太郎"
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
@@ -86,7 +86,7 @@ const ContactForm = () => {
             id='email'
             type="email"
             name="email"
-            placeholder="メールアドレス"
+            placeholder="例）test@gmail.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
@@ -99,7 +99,7 @@ const ContactForm = () => {
             id='tel'
             type="tel"
             name="tel"
-            placeholder="電話番号"
+            placeholder="例）000-0000-0000"
             value={tel}
             onChange={(e) => setTel(e.target.value)}
             required
@@ -113,7 +113,7 @@ const ContactForm = () => {
           id='title'
           type="text"
           name="title"
-          placeholder="件名"
+          placeholder="例）〇〇について"
           value={title}
           onChange={(e) => setTitle(e.target.value)}
           required
@@ -148,7 +148,12 @@ const Form = styled.form`
 const Wrapper = styled.div`
   display: flex;
   gap: 2rem;
-  `;
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    gap: 0;
+  }
+`;
 
 const Label = styled.label`
   width: 100%;
