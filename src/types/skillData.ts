@@ -95,7 +95,7 @@ const SkillsData: SkillData[] = [
   {
     title: "XD",
     experience: "職業訓練校で基礎的な操作を習得",
-    dsescription: `・\n・\n・`,
+    dsescription: `・基本的なツールの使用方法と操作\n・コンポーネント\n・プロトタイピング`,
     categories: 'ツール',
   },
   {
