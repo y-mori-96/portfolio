@@ -62,6 +62,9 @@ const Outline = styled.div`
 
 const OutlineImgWrapper = styled.div`
   width: 60%;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const OutlineImg = styled.img`
