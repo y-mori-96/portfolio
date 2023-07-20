@@ -41,19 +41,18 @@ const HomeAbout: React.FC = () => {
 
           <ScrollAnimation animationType="bottomTop">
             <Text>
-              現在、<br/>
-              プログラミングスクールで、<br/>
+              退職後、プログラミングスクールで<br/>
               HTML/CSS/JavaScriptなどのフロントエンドのスキル、<br/>
-              PHP/Laravel/MySQLなどのバックエンドのスキルを学習。<br/>
+              PHP/Laravel/MySQLなどのバックエンドのスキルを学習し、<br/>
             </Text>
           </ScrollAnimation>
 
           <ScrollAnimation animationType="bottomTop">
             <Text>
-              職業訓練校で、<br/>
+              現在は、職業訓練校で<br/>
               illustrator/Photoshop/XDなどのデザインツール、<br/>
               HTML/CSS/Sass/jQueryなどのフロントエンドのスキル、<br/>
-              WordPressを学習。<br/>
+              WordPressを学習中。<br/>
             </Text>
           </ScrollAnimation>
 
