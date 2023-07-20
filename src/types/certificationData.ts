@@ -26,9 +26,14 @@ const CertificationsData: CertificationData[] = [
     comment: `PHPの基礎的な知識を習得したいと思い受験を決意\n\n制御構文や関数、オブジェクト指向の知識が身についた`,
   },
   {
+    title: "Webクリエイター能力認定試験 エキスパート",
+    date: "2023(令和5)年 7月",
+    comment: `HTML/CSSの知識を深めるため受験を決意\n\n作業指示に従い、要望に合ったウェブサイトを構築できる`,
+  },
+  {
     title: "Photoshopクリエイター能力認定試験 エキスパート",
     date: "2023(令和5)年 7月",
-    comment: `Photoshopで表現できる幅を広げたく学習を決意\n\n作業指示に従い、要望に合ったデザインを表現できる`,
+    comment: `Photoshopで表現できる幅を広げたく受験を決意\n\n作業指示に従い、要望に合ったデザインを表現できる`,
   },
   {
     title: "SEO検定1級",
