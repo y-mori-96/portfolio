@@ -25,7 +25,8 @@ const HomeSkills: React.FC = () => {
               HTML<br/>
               CSS / Sass / Styled-components / Tailwind<br/>
               JavaScript / jQuery / React<br/>
-              TypeScript
+              TypeScript<br/>
+              Three.js
             </Text>
           </Body>
         </Wrapper>
@@ -71,8 +72,9 @@ const HomeSkills: React.FC = () => {
             <H4>開発ツール</H4>
             <Text>
               Git / Github<br/>
-              Excel / Word / PowerPoint / Outlook<br/>
+              Excel / Word / PowerPoint<br/>
               VScode / サクラエディタ<br/>
+              Outlook / Slack
             </Text>
           </Body>
         </Wrapper>
