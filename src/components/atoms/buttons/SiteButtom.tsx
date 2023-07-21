@@ -19,7 +19,8 @@ export default SiteButton;
 const ButtonLink = styled(NavLink)`
   display: inline-block;
   padding: 1rem 2rem;
-  background-color: #85A389;
+  background-color: #ff8100;
+  font-weight: bold;
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
@@ -27,7 +28,7 @@ const ButtonLink = styled(NavLink)`
   box-shadow: 0px 2px 4px #00000033;
 
   &:hover {
-    background-color: #aec7b2;
+    background-color: #fda348;
     transform: translateY(-2px);
     box-shadow: 0px 4px 8px #0000004c;
   }
