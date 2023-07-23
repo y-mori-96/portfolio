@@ -7,12 +7,13 @@ type Props = {
   imageSrc: string;
   title: string;
   dsescription: string;
+  technology: string;
 };
 
 /**
  * コンポーネント定義
  */
-const WorkCard = ({ imageSrc, title, dsescription, }: Props ) => {
+const WorkCard = ({ imageSrc, title, dsescription, technology}: Props ) => {
   return (
     <CardContainer>
       <CardHeader>
@@ -25,8 +26,11 @@ const WorkCard = ({ imageSrc, title, dsescription, }: Props ) => {
               <TableHeaderTitle colSpan={2}>{title}</TableHeaderTitle>
             </tr>
             <tr>
-            <TableData colSpan={2}>{dsescription}</TableData>
-          </tr>
+              <TableData colSpan={2}>{dsescription}</TableData>
+            </tr>
+            <tr>
+              <TableData colSpan={2}>{technology}</TableData>
+            </tr>
           </tbody>
         </Table>
       </CardBody>

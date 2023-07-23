@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import {DL, DT, DD} from "./StyledWorkModal";
 
 /**
  * 型定義
@@ -7,6 +7,7 @@ import styled from "styled-components";
 type Props = {
   release: string;
   period: string;
+  responsible: string;
   technology: string;
   device: string;
 };
@@ -17,6 +18,7 @@ type Props = {
 const WorkModalOutline: React.FC<Props> = ({
     release
    ,period
+   ,responsible
    ,technology
    ,device
 }) => {
@@ -26,6 +28,8 @@ const WorkModalOutline: React.FC<Props> = ({
       <DD>{release}</DD>
       <DT>制作期間</DT>
       <DD>{period}</DD>
+      <DT>担当領域</DT>
+      <DD>{responsible}</DD>
       <DT>使用技術</DT>
       <DD>{technology}</DD>
       <DT>対応機種</DT>
@@ -35,30 +39,3 @@ const WorkModalOutline: React.FC<Props> = ({
 };
 
 export default WorkModalOutline;
-
-/**
- * スタイル
- */
-const DL = styled.dl`
-  line-height: 1.3;
-  width: 100%;
-  padding: 0 3rem;
-  margin-bottom: 2rem;
-  `;
-const DT = styled.dt`
-  font-size: 1.5rem;
-  border-bottom: 1px solid #000;
-  margin-bottom: 0.75rem;
-
-  @media (max-width: 600px) {
-    font-size: 1.2rem;
-  }
-`;
-const DD = styled.dd`
-  font-size: 2rem;
-  margin-bottom: 2rem;
-
-  @media (max-width: 600px) {
-    font-size: 1.5rem;
-  }
-`;

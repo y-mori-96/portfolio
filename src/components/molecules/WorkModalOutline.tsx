@@ -1,16 +1,12 @@
 import React from "react";
 import styled from "styled-components";
+import { WorkData } from '../../types/WorkData';
 import SiteButton from '../atoms/buttons/SiteButtom';
 
 /**
  * 型定義
  */
-type Props = {
-  genre: string;
-  dsescription: string;
-  siteImage: string;
-  link: string;
-};
+type Props = Pick<WorkData, 'genre' | 'dsescription' | 'siteImage' | 'siteLink'>;
 
 /**
  * コンポーネント定義
@@ -19,7 +15,7 @@ const WorkModalOutline: React.FC<Props> = ({
     genre
    ,dsescription
    ,siteImage
-   ,link
+   ,siteLink
 }) => {
   return (
     <Outline>
@@ -31,7 +27,7 @@ const WorkModalOutline: React.FC<Props> = ({
         <SiteDescription>
           {dsescription}
         </SiteDescription>
-        <SiteButton url={link} />
+        <SiteButton url={siteLink} />
       </OutlineBody>
     </Outline>
   );

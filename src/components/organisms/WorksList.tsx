@@ -2,8 +2,7 @@ import React, { useState } from "react";
 import styled from 'styled-components';
 import { WorksData } from "../../types/WorkData";
 import WorkCard from "./cards/WorkCard";
-import PortfolioModal from "./modals/PortfolioModal";
-import ForestCodeModal from "./modals/ForestCodeModal";
+import WorkModal from "./modals/WorkModal";
 
 /**
  * コンポーネント定義
@@ -30,14 +29,16 @@ const WorksList: React.FC = () => {
               imageSrc={work.imageSrc}
               title={work.title}
               dsescription={work.dsescription}
+              technology={work.technology}
             />
           </CardsItem>
         ))}
       </CardsContainer>
 
       {/* モーダルを表示する */}
-      {selectedWork === "portfolio" && (<PortfolioModal onClose={closeModal} />)}
-      {selectedWork === "forestCode" && (<ForestCodeModal onClose={closeModal} />)}
+      {selectedWork === "portfolio" && (<WorkModal modal={0} onClose={closeModal} />)}
+      {selectedWork === "forestCode" && (<WorkModal modal={1} onClose={closeModal} />)}
+      {selectedWork === "applianceOnline" && (<WorkModal modal={2} onClose={closeModal} />)}
     </>
   );
 };
