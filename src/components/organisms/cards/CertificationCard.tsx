@@ -22,7 +22,7 @@ const CertificationCard = ({ title, date, comment }: CertificationData ) => {
               </TableHeaderTitle>
             </tr>
             <tr>
-              <TableData>{date}　取得</TableData>
+              <TableData>{date}</TableData>
             </tr>
             <tr>
               <TableHeaderData colSpan={2}>
