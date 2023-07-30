@@ -21,7 +21,7 @@ const CareersData: CareerData[] = [
     outState: "修了",
     period: "4ヶ月",
     title: "職業訓練校\n\nWebデザインコース",
-    text: `プログラミングスクロールでは学べなかった\nAdobe製デザインツールの操作、WordPressの構築経験を積みたく入校。\n\nIllustrator / Photoshop / XD / Excel / Word / PowerPoint / \nHTML / CSS / Sass / jQuery / WordPress を学習。\n\nWeb制作に必要な知識を習得。\n在学中にレンタルサーバの契約、ドメイン取得を経験。\n3つのサイトを制作・公開。\n授業外の知識も積極的に学習を行った。`,
+    text: `プログラミングスクールでは学べなかった\nAdobe製デザインツールの操作、WordPressの構築経験を積みたく入校。\n\nIllustrator / Photoshop / XD / Excel / Word / PowerPoint / \nHTML / CSS / Sass / jQuery / WordPress を学習。\n\nWeb制作に必要な知識を習得。\n在学中にレンタルサーバの契約、ドメイン取得を経験。\n3つのサイトを制作・公開。\n授業外の知識も積極的に学習を行った。`,
   },
   {
     inDate: new Date(2022, 11, 6),
