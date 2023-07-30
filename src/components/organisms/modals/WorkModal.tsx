@@ -1,10 +1,11 @@
 import React from 'react';
-import {ModalContainer, Wrapper} from './StyledModal';
+import styled from 'styled-components';
 import { WorksData } from '../../../types/WorkData';
 import WorkModalSiteTitle from '../../atoms/Titles/WorkModalSiteTitle';
 import WorkModalHeader from "../../atoms/Titles/WorkModalHeader";
 import CloseButton from '../../atoms/buttons/CloseButton';
 import WorkModalOutline from '../../molecules/WorkModalOutline';
+import WorkModalHowTo from '../../molecules/WorkModalHowTo';
 import WorkModalInfo from '../../molecules/WorkModalInfo';
 import WorkModaBackground from '../../molecules/WorkModaBackground';
 import WorkModaDesign from '../../molecules/WorkModaDesign';
@@ -31,6 +32,12 @@ const WorkModal: React.FC<ModalProps> = ({ modal, onClose }) => {
           dsescription = {siteData.dsescription}
           siteImage = {siteData.siteImage}
           siteLink = {siteData.siteLink}
+        />
+
+        <WorkModalHeader title="利用方法"/>
+
+        <WorkModalHowTo
+          howto = {siteData.howto}
         />
 
         <WorkModalHeader title="概要"/>
@@ -72,3 +79,32 @@ const WorkModal: React.FC<ModalProps> = ({ modal, onClose }) => {
 };
 
 export default WorkModal;
+
+const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000cc;
+  cursor: pointer;
+
+  z-index: 9;
+`;
+
+const Wrapper = styled.div`
+  position: fixed;
+  top: 0;
+
+  width: 1250px;
+  max-width: 100%;
+  margin: 0 auto;
+
+  height: 100vh;
+
+  border: 1px solid black;
+  background-color: #ffffff;
+
+  overflow-y: scroll;
+  z-index: 99;
+`;

@@ -39,6 +39,7 @@ const WorksList: React.FC = () => {
       {selectedWork === "portfolio" && (<WorkModal modal={0} onClose={closeModal} />)}
       {selectedWork === "forestCode" && (<WorkModal modal={1} onClose={closeModal} />)}
       {selectedWork === "applianceOnline" && (<WorkModal modal={2} onClose={closeModal} />)}
+      {selectedWork === "backpacktourism" && (<WorkModal modal={3} onClose={closeModal} />)}
     </>
   );
 };
