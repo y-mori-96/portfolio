@@ -3,6 +3,7 @@ import workPortfolio from '../images/work_portfolio.png';
 import workForestCode from '../images/work_forestCode.png';
 import workApplianceOnline from '../images/work_applianceOnline.png';
 import workBackpacktourism from '../images/work_backpacktourism.png';
+import workBoardgameCafe from '../images/work_boardgameCafe.png';
 
 export type WorkData = {
   modal: string;
@@ -47,7 +48,7 @@ export const WorksData: WorkData[] = [
     release: "2023年7月13日",
     period: "2023年5月~7月(2ヶ月)",
     responsible: "企画 / サイト設計 / コーディング / ロゴ制作",
-    technology: "HTML / CSS(Styled-Components) / TypeScript / React / PowerPoint",
+    technology: "HTML / CSS(Styled-Components) / TypeScript / React",
     device: "PC / タブレット / モバイル",
 
     howto: `各コンテンツの閲覧`,
@@ -169,7 +170,8 @@ export const WorksData: WorkData[] = [
     genre: "通販サイト",
     dsescription: "架空の家電通販サイト",
     siteImage: workApplianceOnline,
-    siteLink: "https://appliance.y-mori-96.com/",
+    // siteLink: "https://appliance.y-mori-96.com/",
+    siteLink: "http://isp6000114.starfree.jp/online-appliance/",
 
     release: "2023年7月17日",
     period: "2023年6月~7月(1ヶ月)",
@@ -223,7 +225,8 @@ export const WorksData: WorkData[] = [
     genre: "コーポレートサイト/航空券予約サイト",
     dsescription: "架空の旅行代理店",
     siteImage: workBackpacktourism,
-    siteLink: "https://backpacktourism.y-mori-96.com/",
+    // siteLink: "https://backpacktourism.y-mori-96.com/",
+    siteLink: "http://isp6000114.starfree.jp/backpacktourism/",
 
     release: "2023年7月30日",
     period: "2023年7月(3週間)",
@@ -286,6 +289,77 @@ export const WorksData: WorkData[] = [
     `・視認性を高めるためゴシック体を採用
     ・キャッチコピーは強調させるべくフォント変更。しっぽりアンチックを採用`,
   },
+  {
+    modal: "boardgameCafe",
+    imageSrc: workBoardgameCafe,
+
+    title: "ボードゲームカフェ　あきこま",
+    genre: "SHS / 通販 / レンタル",
+    dsescription: "架空のボードゲームカフェ",
+    siteImage: workBoardgameCafe,
+    siteLink: "https://boardgame-mori.com/boardgame-cafe/public/",
+
+    release: "2023/8/8",
+    period: "2023年3月(1ヶ月)",
+    responsible: "企画 / サイト設計 / コーディング / ロゴ制作",
+    technology: "HTML / CSS(Tailwind) / PHP8 / Laravel10",
+    device: "PC / タブレット / モバイル",
+
+    howto:
+    `<テストユーザー>
+    メールアドレス：testuser1@test.com
+    パスワード：password
+
+    <機能>
+    ・投稿
+    ・フォロー
+    ・レビュー
+    ・通販
+    ・レンタル
+
+    <通販での購入方法>
+    メールアドレス：testuser1@test.com
+    カード情報(カード番号)：4242 4242 4242 4242
+    カード情報(有効期限)：06/26
+    カード情報(セキュリティコード)：111
+    カード所有者名：test
+    国または地域：日本
+    次回の購入：なし`,
+
+    problem:
+    `・ボードゲーム人口を増やしたい。
+    ・ボードゲームは1度遊ぶと楽しさが伝わるが、
+    気軽に試せる機会がなく購入してまで遊ぶことが少ない`,
+    solution:
+    `ボードゲームに気軽に触れることができるサービスをつくる。
+    ・低価格なボードゲームカフェ
+    ・レンタルサービス
+    ・通販サイト
+    ・SNS`,
+    technologySelection:
+    `1.Laravel
+    ・認証機能がある
+    ・MVCパターンで実装。保守性や拡張性が高い
+    ・学習コストが低い`,
+    target: "大学生",
+    goal: "来店や通販、レンタルサービスを通して手軽にボードゲームに触れていただく",
+
+    emotion:
+    `柔らかく落ち着いた印象を与える`,
+    composition:
+    `1カラム
+    ・シンプルなデザイン
+    ・一つひとつの要素を大きく見せる`,
+    color:
+    `・ベースカラー：
+    柔らかい印象を与える淡い緑を採用
+    ・メインカラー：
+    落ち着いた印象を与える濃い青を採用
+    ・アクセントカラー：
+    メインカラーの補色のである赤系を採用`,
+    siteColor: ['#dcfce7', '#000', '#6366f1', '#fff', '#B91C1C', '#fff'],
+    font: "視認性を高めるためゴシック体を採用",
+  },
   // {
   //   modal: "",
   //   imageSrc: noImage,
@@ -301,6 +375,9 @@ export const WorksData: WorkData[] = [
   //   responsible: "",
   //   technology: "",
   //   device: "PC / タブレット / モバイル",
+
+  //   howto:
+  //   ``,
 
   //   problem: ``,
   //   solution: "",
